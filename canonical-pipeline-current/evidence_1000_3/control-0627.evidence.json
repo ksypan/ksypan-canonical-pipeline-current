@@ -1,0 +1,481 @@
+{
+  "document": "control-0627",
+  "fields": {
+    "admission_date": {
+      "value": "16/02/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 16.02.2022 по 28.02.2022.",
+          "start": 144,
+          "end": 203
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "28/02/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 16.02.2022 по 28.02.2022.",
+          "start": 144,
+          "end": 203
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 1, ФК 2"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС: прогрессирующая стенокардия, нестабильное течение."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 18.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "пени тяжести. Рост 188 см, масса тела 65 кг, ИМТ 18,4 кг/м². Видимые слизистые без особенностей. Д",
+          "start": 454,
+          "end": 552
+        }
+      ]
+    },
+    "bp": {
+      "value": "155/83",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": ". Тоны сердца ритмичные, пульс 103 в минуту, АД 155/83 мм рт. ст. Живот мягкий, безболезненный. Диу",
+          "start": 598,
+          "end": 697
+        }
+      ]
+    },
+    "bpm": {
+      "value": 103,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "1 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 103 в минуту, АД 155/83 мм рт. ст. Живот мягкий,",
+          "start": 578,
+          "end": 677
+        }
+      ]
+    },
+    "height": {
+      "value": 188,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "е состояние ближе к средней степени тяжести. Рост 188 см, масса тела 65 кг, ИМТ 18,4 кг/м². Видимы",
+          "start": 423,
+          "end": 521
+        }
+      ]
+    },
+    "rr": {
+      "value": 21,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "стые без особенностей. Дыхание везикулярное. ЧДД 21 в минуту, SpO2 97%. Тоны сердца ритмичные, п",
+          "start": 528,
+          "end": 624
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "из-за приступов головной боли периодически ограничивал нагрузку. Повышение АД отмечает несколько лет. Курит. Лекарственная аллергия со слов пациента не отмечалась. Сведения о наследственных сердечно-сосудистых заболеваниях не представлены.",
+          "start": 1267,
+          "end": 1506
+        }
+      ]
+    },
+    "spo2": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "стей. Дыхание везикулярное. ЧДД 21 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 103 в минуту,",
+          "start": 545,
+          "end": 642
+        }
+      ]
+    },
+    "weight": {
+      "value": 65,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лиже к средней степени тяжести. Рост 188 см, масса тела 65 кг, ИМТ 18,4 кг/м². Видимые слизистые без ос",
+          "start": 436,
+          "end": 539
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 84,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ при поступлении. На ЭКГ при поступлении (16.02.2022): синусовый ритм, ЧСС 84 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса.",
+          "start": 2079,
+          "end": 2245
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ при поступлении. На ЭКГ при поступлении (16.02.2022): синусовый ритм, ЧСС 84 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса.",
+          "start": 2079,
+          "end": 2245
+        }
+      ]
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ при поступлении. На ЭКГ при поступлении (16.02.2022): синусовый ритм, ЧСС 84 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса.",
+          "start": 2079,
+          "end": 2245
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 52,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 52%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2247,
+          "end": 2409
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 58,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 52%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2247,
+          "end": 2409
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 2 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 52%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2247,
+          "end": 2409
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез нижней стенки ЛЖ"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 52%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2247,
+          "end": 2409
+        }
+      ]
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "N",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "отрицательный",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "crea": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "glu": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hb": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ldl": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "leucocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "thrombocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Тикагрелор",
+          "prescription": "90 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

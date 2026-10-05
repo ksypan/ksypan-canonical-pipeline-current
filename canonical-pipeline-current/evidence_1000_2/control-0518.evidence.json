@@ -1,0 +1,495 @@
+{
+  "document": "control-0518",
+  "fields": {
+    "admission_date": {
+      "value": "13/07/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Дата госпитализации 13.07.2023",
+          "start": 186,
+          "end": 216
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "23/07/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дата выписки 23.07.2023.",
+          "start": 218,
+          "end": 242
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 1,
+        "text": "Сопутствующие диагнозы: Фибрилляция предсердий, постоянная форма"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Сопутствующие диагнозы: Фибрилляция предсердий, постоянная форма",
+          "start": 334,
+          "end": 398
+        }
+      ]
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I20.0",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: ИБС. Нестабильная стенокардия. Код МКБ-10 I20.0.",
+          "start": 267,
+          "end": 333
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 1,
+        "text": "Сахарный диабет 2 типа."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Сахарный диабет 2 типа.",
+          "start": 400,
+          "end": 423
+        }
+      ]
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Нестабильная стенокардия."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "spo2": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 91,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 13.07.2023: фибрилляция предсердий, ЧСС 91 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2670,
+          "end": 2758
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Фибрилляция предсердий"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 13.07.2023: фибрилляция предсердий, ЧСС 91 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2670,
+          "end": 2758
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 56,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 40 мм, КДР ЛЖ 54 мм, ФВ ЛЖ 56%. Митральная регургитация 1 ст. Перикардиальный выпот не выявлен",
+          "start": 1760,
+          "end": 1874
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 54,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 40 мм, КДР ЛЖ 54 мм, ФВ ЛЖ 56%. Митральная регургитация 1 ст. Перикардиальный выпот не выявлен",
+          "start": 1760,
+          "end": 1874
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 1 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 40 мм, КДР ЛЖ 54 мм, ФВ ЛЖ 56%. Митральная регургитация 1 ст. Перикардиальный выпот не выявлен",
+          "start": 1760,
+          "end": 1874
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "15/07/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "15.07.2023",
+          "start": 1519,
+          "end": 1529
+        }
+      ]
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "15.07.2023 выполнена селективная КАГ. Ствол ЛКА без критического поражения. ПМЖВ: окклюзия",
+          "start": 1519,
+          "end": 1609
+        }
+      ]
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "отрицательный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 13.07.2023: первый тропониновый тест — отрицательный",
+          "start": 1936,
+          "end": 2009
+        }
+      ]
+    },
+    "crea": {
+      "value": 94,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 94 мкмоль/л.",
+          "start": 2148,
+          "end": 2170
+        }
+      ]
+    },
+    "glu": {
+      "value": 7.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 7,5 ммоль/л",
+          "start": 2127,
+          "end": 2146
+        }
+      ]
+    },
+    "hb": {
+      "value": 138,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 138 г/л",
+          "start": 2084,
+          "end": 2102
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.8,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 4.8 ммоль/л",
+          "start": 2063,
+          "end": 2082
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 8.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 8.3 ×10⁹/л",
+          "start": 2041,
+          "end": 2061
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 212,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 212 ×10⁹/л",
+          "start": 2104,
+          "end": 2125
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 6.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 6,3 ммоль/л",
+          "start": 2011,
+          "end": 2039
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": [
+        {
+          "name": "Ривароксабан",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

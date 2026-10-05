@@ -1,0 +1,446 @@
+{
+  "document": "train-0049",
+  "fields": {
+    "admission_date": {
+      "value": "09/01/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступил 09.01.2023. Выписан 17.01.2023.",
+          "start": 194,
+          "end": 234
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "17/01/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступил 09.01.2023. Выписан 17.01.2023.",
+          "start": 194,
+          "end": 234
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "Гипертоническая болезнь II стадии"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 1,
+        "text": "ХОБЛ вне обострения"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС: прогрессирующая стенокардия, нестабильное течение"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "spo2": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 102,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (09.01.2023): синусовый ритм, ЧСС 102 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2141,
+          "end": 2240
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (09.01.2023): синусовый ритм, ЧСС 102 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2141,
+          "end": 2240
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "N",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "отрицательный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — отрицательный.",
+          "start": 1756,
+          "end": 1797
+        }
+      ]
+    },
+    "crea": {
+      "value": 92,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 92 мкмоль/л",
+          "start": 1692,
+          "end": 1713
+        }
+      ]
+    },
+    "glu": {
+      "value": 5.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 5.4 ммоль/л",
+          "start": 1626,
+          "end": 1645
+        }
+      ]
+    },
+    "hb": {
+      "value": 118,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 118 г/л",
+          "start": 1736,
+          "end": 1754
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 4.6 ммоль/л",
+          "start": 1715,
+          "end": 1734
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 6.1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 6.1 ×10⁹/л",
+          "start": 1670,
+          "end": 1690
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 347,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 347 ×10⁹/л",
+          "start": 1647,
+          "end": 1668
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 5.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 09.01.2023: общий холестерин 5.3 ммоль/л",
+          "start": 1563,
+          "end": 1624
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

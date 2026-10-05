@@ -1,0 +1,121 @@
+{
+  "admission_date": "13/01/2023",
+  "discharge_date": "17/01/2023",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "I20.0",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС: прогрессирующая стенокардия, нестабильное течение."
+  },
+  "bmi": "не указано",
+  "bp": "178/96",
+  "bpm": 68,
+  "height": "не указано",
+  "rr": 18,
+  "smoking": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "spo2": 99,
+  "weight": "не указано",
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 106,
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Синусовый"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "не указано",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "N",
+  "ca_lad": "не указано",
+  "rca": "не указано",
+  "card_trop": "отрицательный",
+  "crea": "не указано",
+  "glu": "не указано",
+  "hb": "не указано",
+  "ldl": "не указано",
+  "leucocytes": "не указано",
+  "thrombocytes": "не указано",
+  "tot_chol": "не указано",
+  "2_aag": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    },
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": 0,
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Бисопролол",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Аторвастатин",
+      "prescription": "80 мг вечером"
+    }
+  ]
+}

@@ -1,0 +1,445 @@
+{
+  "document": "control-0539",
+  "fields": {
+    "admission_date": {
+      "value": "10/10/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 10.10.2024 по 22.10.2024.",
+          "start": 219,
+          "end": 278
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "22/10/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 10.10.2024 по 22.10.2024.",
+          "start": 219,
+          "end": 278
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.0",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Диагноз. Основной диагноз: ИБС. Острый инфаркт миокарда передней стенки левого желудочка с подъёмом ST. Код МКБ-10 I21.0.",
+          "start": 1278,
+          "end": 1399
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": 1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip I.",
+          "start": 1400,
+          "end": 1431
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "передней стенки левого желудочка"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Острый инфаркт миокарда передней стенки левого желудочка с подъёмом ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Не курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "отмечает длительные периоды напряжённой работы. Не курит. Лекарственная аллергия со слов пациента не отмечалась. Сведения о наследственных сердечно-сосудистых заболеваниях не представлены.",
+          "start": 672,
+          "end": 860
+        }
+      ]
+    },
+    "spo2": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 98,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ при поступлении. На ЭКГ при поступлении (10.10.2024): синусовый ритм, ЧСС 98 уд/мин. Подъём сегмента ST в V1–V4. На",
+          "start": 1660,
+          "end": 1779
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях V1–V4",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ при поступлении. На ЭКГ при поступлении (10.10.2024): синусовый ритм, ЧСС 98 уд/мин. Подъём сегмента ST в V1–V4. На",
+          "start": 1660,
+          "end": 1779
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 55,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография. Эхокардиография выполнена в стационаре: ЛП 46 мм, КДР ЛЖ 55 мм, ФВ ЛЖ 55%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1433,
+          "end": 1631
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 55,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография. Эхокардиография выполнена в стационаре: ЛП 46 мм, КДР ЛЖ 55 мм, ФВ ЛЖ 55%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1433,
+          "end": 1631
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 2 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография. Эхокардиография выполнена в стационаре: ЛП 46 мм, КДР ЛЖ 55 мм, ФВ ЛЖ 55%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1433,
+          "end": 1631
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез передней стенки ЛЖ"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография. Эхокардиография выполнена в стационаре: ЛП 46 мм, КДР ЛЖ 55 мм, ФВ ЛЖ 55%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1433,
+          "end": 1631
+        }
+      ]
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "crea": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "glu": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hb": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ldl": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "leucocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "thrombocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Лозартан",
+          "prescription": "50 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

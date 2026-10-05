@@ -1,0 +1,126 @@
+{
+  "admission_date": "01/05/2024",
+  "discharge_date": "14/05/2024",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "I21.4",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 1,
+    "text": "ХСН 2А, ФК 3."
+  },
+  "killip": 1,
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "Острый коронарный синдром без подъёма ST, инфаркт миокарда."
+  },
+  "bmi": "не указано",
+  "bp": "не указано",
+  "bpm": "не указано",
+  "height": "не указано",
+  "rr": "не указано",
+  "smoking": {
+    "code": 1,
+    "text": "Курит"
+  },
+  "spo2": "не указано",
+  "weight": "не указано",
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": "не указано",
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "синусовый ритм"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "не указано",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "Y",
+  "ca_lad": 2,
+  "rca": 0,
+  "card_trop": "положительный",
+  "crea": 108,
+  "glu": 6.8,
+  "hb": 133,
+  "ldl": "не указано",
+  "leucocytes": 8.6,
+  "thrombocytes": 343,
+  "tot_chol": 5.4,
+  "2_aag": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    },
+    {
+      "name": "Тикагрелор",
+      "prescription": "90 мг 2 раза в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Периндоприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Метопролол",
+      "prescription": "50 мг 2 раза в день"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

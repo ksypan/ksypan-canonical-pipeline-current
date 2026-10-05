@@ -1,0 +1,126 @@
+{
+  "admission_date": "17/09/2023",
+  "discharge_date": "27/09/2023",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "I20.0",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС: прогрессирующая стенокардия, нестабильное течение."
+  },
+  "bmi": 30.1,
+  "bp": "179/88",
+  "bpm": 94,
+  "height": 162,
+  "rr": 23,
+  "smoking": {
+    "code": 0,
+    "text": "Бросил курить"
+  },
+  "spo2": 98,
+  "weight": 79,
+  "ecg_avb": {
+    "code": 1,
+    "text": "АВ-блокада I степени"
+  },
+  "ecg_bpm": "не указано",
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "синусовый ритм"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "не указано",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "N",
+  "ca_lad": "не указано",
+  "rca": "не указано",
+  "card_trop": "отрицательный",
+  "crea": 89,
+  "glu": 6.3,
+  "hb": 158,
+  "ldl": 2.8,
+  "leucocytes": 8.8,
+  "thrombocytes": 304,
+  "tot_chol": 4.7,
+  "2_aag": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    },
+    {
+      "name": "Тикагрелор",
+      "prescription": "90 мг 2 раза в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Рамиприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Метопролол",
+      "prescription": "50 мг 2 раза в день"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

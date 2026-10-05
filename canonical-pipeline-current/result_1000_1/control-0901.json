@@ -1,0 +1,126 @@
+{
+  "admission_date": "14/12/2021",
+  "discharge_date": "26/12/2021",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 1,
+    "text": "ХБП 3А"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "не указано",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 1,
+    "text": "нижней стенки левого желудочка"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС. Острый инфаркт миокарда нижней стенки левого желудочка с подъёмом ST."
+  },
+  "bmi": "не указано",
+  "bp": "146/67",
+  "bpm": 96,
+  "height": 177,
+  "rr": 21,
+  "smoking": {
+    "code": 0,
+    "text": "Бросил курить"
+  },
+  "spo2": 99,
+  "weight": 59,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 69,
+  "ecg_elevation": "Элевация ST в отведениях II, III, aVF",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Синусовый"
+  },
+  "echo_ef": 53,
+  "echo_lvd": 53,
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 1,
+    "text": "Гипокинез нижней стенки ЛЖ"
+  },
+  "rg_date": "16/12/2021",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "N",
+  "ca_lad": "не указано",
+  "rca": "не указано",
+  "card_trop": "положительный",
+  "crea": "не указано",
+  "glu": "не указано",
+  "hb": "не указано",
+  "ldl": "не указано",
+  "leucocytes": "не указано",
+  "thrombocytes": "не указано",
+  "tot_chol": "не указано",
+  "2_aag": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    },
+    {
+      "name": "Тикагрелор",
+      "prescription": "90 мг 2 раза в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Рамиприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Метопролол",
+      "prescription": "50 мг 2 раза в день"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Аторвастатин",
+      "prescription": "80 мг вечером"
+    }
+  ]
+}

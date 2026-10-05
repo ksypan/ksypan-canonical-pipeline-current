@@ -1,0 +1,499 @@
+{
+  "document": "control-0729",
+  "fields": {
+    "admission_date": {
+      "value": "20/08/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступила 20.08.2024. Выписана 24.08.2024.",
+          "start": 211,
+          "end": 253
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "24/08/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступила 20.08.2024. Выписана 24.08.2024.",
+          "start": 211,
+          "end": 253
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 1,
+        "text": "ХОБЛ вне обострения"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХОБЛ вне обострения",
+          "start": 441,
+          "end": 460
+        }
+      ]
+    },
+    "diagnosis_icd": {
+      "value": "I21.0",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: Острый инфаркт миокарда передней стенки, с элевацией ST. Код МКБ-10 I21.0.",
+          "start": 279,
+          "end": 371
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 2А, ФК 2."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХСН 2А, ФК 2.",
+          "start": 462,
+          "end": 475
+        }
+      ]
+    },
+    "killip": {
+      "value": 2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip II.",
+          "start": 476,
+          "end": 508
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "передней стенки левого желудочка"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "Острый инфаркт миокарда передней стенки, с элевацией ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 23.1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "пени тяжести. Рост 169 см, масса тела 66 кг, ИМТ 23.1 кг/м². Кожа обычной окраски, влажная. В лёгк",
+          "start": 569,
+          "end": 667
+        }
+      ]
+    },
+    "bp": {
+      "value": "117/77",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 69 в минуту, АД 117/77 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 785,
+          "end": 884
+        }
+      ]
+    },
+    "bpm": {
+      "value": 69,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "6 в минуту, SpO2 96%. Тоны сердца ритмичные, пульс 69 в минуту, АД 117/77 мм рт. ст. Живот при пал",
+          "start": 766,
+          "end": 864
+        }
+      ]
+    },
+    "height": {
+      "value": 169,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "м осмотре состояние средней степени тяжести. Рост 169 см, масса тела 66 кг, ИМТ 23.1 кг/м². Кожа о",
+          "start": 538,
+          "end": 636
+        }
+      ]
+    },
+    "rr": {
+      "value": 16,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "делах выслушиваются единичные влажные хрипы. ЧДД 16 в минуту, SpO2 96%. Тоны сердца ритмичные, п",
+          "start": 716,
+          "end": 812
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "иалами. Повышение АД отмечает несколько лет. Курит. Лекарственная аллергия со слов пациентки не",
+          "start": 1415,
+          "end": 1510
+        }
+      ]
+    },
+    "spo2": {
+      "value": 96,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ся единичные влажные хрипы. ЧДД 16 в минуту, SpO2 96%. Тоны сердца ритмичные, пульс 69 в минуту,",
+          "start": 733,
+          "end": 829
+        }
+      ]
+    },
+    "weight": {
+      "value": 66,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тояние средней степени тяжести. Рост 169 см, масса тела 66 кг, ИМТ 23.1 кг/м². Кожа обычной окраски, вл",
+          "start": 551,
+          "end": 654
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 89,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (20.08.2024): синусовый ритм, ЧСС 89 уд/мин. Подъём сегмента ST в V1–V4. На",
+          "start": 1605,
+          "end": 1703
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях V1–V4",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (20.08.2024): синусовый ритм, ЧСС 89 уд/мин. Подъём сегмента ST в V1–V4. На",
+          "start": 1605,
+          "end": 1703
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 41,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 51 мм, ФВ ЛЖ 41%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1807,
+          "end": 1965
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 51,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 51 мм, ФВ ЛЖ 41%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1807,
+          "end": 1965
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 2 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 51 мм, ФВ ЛЖ 41%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1807,
+          "end": 1965
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез передней стенки ЛЖ"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 45 мм, КДР ЛЖ 51 мм, ФВ ЛЖ 41%. Гипокинез передней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 1807,
+          "end": 1965
+        }
+      ]
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "crea": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "glu": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hb": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ldl": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "leucocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "thrombocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

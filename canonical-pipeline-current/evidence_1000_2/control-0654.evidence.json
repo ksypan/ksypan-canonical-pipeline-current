@@ -1,0 +1,505 @@
+{
+  "document": "control-0654",
+  "fields": {
+    "admission_date": {
+      "value": "01/11/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Дата госпитализации 01.11.2024",
+          "start": 198,
+          "end": 228
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "14/11/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дата выписки 14.11.2024.",
+          "start": 230,
+          "end": 254
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.4",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: Острый коронарный синдром без подъёма ST, инфаркт миокарда. Код МКБ-10 I21.4.",
+          "start": 1362,
+          "end": 1457
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 1,
+        "text": "Фоновые и сопутствующие заболевания: Сахарный диабет 2 типа"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Фоновые и сопутствующие заболевания: Сахарный диабет 2 типа",
+          "start": 1458,
+          "end": 1517
+        }
+      ]
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 2А, ФК 2."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХСН 2А, ФК 2.",
+          "start": 1519,
+          "end": 1532
+        }
+      ]
+    },
+    "killip": {
+      "value": 3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip III.",
+          "start": 1533,
+          "end": 1566
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "Острый коронарный синдром без подъёма ST, инфаркт миокарда."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Анамнез жизни: В прошлом занималась сестринским делом и организацией ухода за больными. Курит. Лекарственная аллергия со слов пациентки не отмечалась. Сведения о наследственных сердечно-сосудистых заболеваниях не представлены.",
+          "start": 656,
+          "end": 882
+        }
+      ]
+    },
+    "spo2": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 81,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (01.11.2024): синусовый ритм, ЧСС 81 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса.",
+          "start": 1572,
+          "end": 1717
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (01.11.2024): синусовый ритм, ЧСС 81 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса.",
+          "start": 1572,
+          "end": 1717
+        }
+      ]
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (01.11.2024): синусовый ритм, ЧСС 81 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса.",
+          "start": 1572,
+          "end": 1717
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 47,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография выполнена в стационаре: ЛП 40 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 47%. Митральная регургитация 1 ст. Полости сердца без внутриполостных образований",
+          "start": 2435,
+          "end": 2586
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 50,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография выполнена в стационаре: ЛП 40 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 47%. Митральная регургитация 1 ст. Полости сердца без внутриполостных образований",
+          "start": 2435,
+          "end": 2586
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 1 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография выполнена в стационаре: ЛП 40 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 47%. Митральная регургитация 1 ст. Полости сердца без внутриполостных образований",
+          "start": 2435,
+          "end": 2586
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — положительный",
+          "start": 1877,
+          "end": 1917
+        }
+      ]
+    },
+    "crea": {
+      "value": 99,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 99 мкмоль/л",
+          "start": 1942,
+          "end": 1963
+        }
+      ]
+    },
+    "glu": {
+      "value": 7.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 7.4 ммоль/л",
+          "start": 1856,
+          "end": 1875
+        }
+      ]
+    },
+    "hb": {
+      "value": 143,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 143 г/л.",
+          "start": 1965,
+          "end": 1984
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 4.1 ммоль/л",
+          "start": 1835,
+          "end": 1854
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 6.9,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении (01.11.2024) получены результаты: лейкоциты 6.9 ×10⁹/л",
+          "start": 1733,
+          "end": 1803
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 276,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 276 ×10⁹/л",
+          "start": 1919,
+          "end": 1940
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 5.2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 5,2 ммоль/л",
+          "start": 1805,
+          "end": 1833
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

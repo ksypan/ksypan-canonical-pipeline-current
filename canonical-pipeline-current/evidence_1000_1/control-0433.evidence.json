@@ -1,0 +1,481 @@
+{
+  "document": "control-0433",
+  "fields": {
+    "admission_date": {
+      "value": "14/12/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступил 14.12.2023. Выписан 20.12.2023.",
+          "start": 205,
+          "end": 245
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "20/12/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступил 14.12.2023. Выписан 20.12.2023.",
+          "start": 205,
+          "end": 245
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 1,
+        "text": "ХБП 3Б"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "Острый коронарный синдром без подъёма ST, инфаркт миокарда."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Бросил курить"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "образ жизни был связан с постоянными переездами и верховой ездой. Бросил курить. Лекарственная аллергия со слов пациента не отмечалась. Сведения о наследственных сердечно-сосудистых заболеваниях не представлены.",
+          "start": 843,
+          "end": 1054
+        }
+      ]
+    },
+    "spo2": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (14.12.2023): синусовый ритм, ЧСС 97 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 1510,
+          "end": 1608
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (14.12.2023): синусовый ритм, ЧСС 97 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 1510,
+          "end": 1608
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 58,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 38 мм, КДР ЛЖ 53 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 2449,
+          "end": 2605
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 53,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 38 мм, КДР ЛЖ 53 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 2449,
+          "end": 2605
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 2 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 38 мм, КДР ЛЖ 53 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 2449,
+          "end": 2605
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез нижней стенки ЛЖ"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 38 мм, КДР ЛЖ 53 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Полости сердца без внутриполостных образований",
+          "start": 2449,
+          "end": 2605
+        }
+      ]
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "N",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — положительный",
+          "start": 1829,
+          "end": 1869
+        }
+      ]
+    },
+    "crea": {
+      "value": 155,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 155 мкмоль/л.",
+          "start": 1894,
+          "end": 1917
+        }
+      ]
+    },
+    "glu": {
+      "value": 4.6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 4.6 ммоль/л",
+          "start": 1744,
+          "end": 1763
+        }
+      ]
+    },
+    "hb": {
+      "value": 158,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 158 г/л",
+          "start": 1788,
+          "end": 1806
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.7,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 4,7 ммоль/л",
+          "start": 1808,
+          "end": 1827
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 12.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 12,5 ×10⁹/л",
+          "start": 1765,
+          "end": 1786
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 331,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 331 ×10⁹/л",
+          "start": 1871,
+          "end": 1892
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 6.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 14.12.2023: общий холестерин 6,4 ммоль/л",
+          "start": 1681,
+          "end": 1742
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Тикагрелор",
+          "prescription": "90 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Лозартан",
+          "prescription": "50 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

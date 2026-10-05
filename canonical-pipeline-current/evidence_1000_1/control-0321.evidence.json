@@ -1,0 +1,505 @@
+{
+  "document": "control-0321",
+  "fields": {
+    "admission_date": {
+      "value": "04/08/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступил 04.08.2021. Выписан 08.08.2021.",
+          "start": 164,
+          "end": 204
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "08/08/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Поступил 04.08.2021. Выписан 08.08.2021.",
+          "start": 164,
+          "end": 204
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "Сопутствующие диагнозы: Гипертоническая болезнь II стадии"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Сопутствующие диагнозы: Гипертоническая болезнь II стадии",
+          "start": 341,
+          "end": 398
+        }
+      ]
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.1",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: ИБС. Острый инфаркт миокарда нижней стенки левого желудочка с подъёмом ST. Код МКБ-10 I21.1.",
+          "start": 230,
+          "end": 340
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 1, ФК 2."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХСН 1, ФК 2.",
+          "start": 400,
+          "end": 412
+        }
+      ]
+    },
+    "killip": {
+      "value": 1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip I.",
+          "start": 413,
+          "end": 444
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "нижней стенки левого желудочка"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Острый инфаркт миокарда нижней стенки левого желудочка с подъёмом ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 28.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "пени тяжести. Рост 185 см, масса тела 97 кг, ИМТ 28,3 кг/м². Кожа обычной окраски, влажная. Дыхани",
+          "start": 1118,
+          "end": 1216
+        }
+      ]
+    },
+    "bp": {
+      "value": "143/103",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 85 в минуту, АД 143/103 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 1256,
+          "end": 1356
+        }
+      ]
+    },
+    "bpm": {
+      "value": 85,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "7 в минуту, SpO2 95%. Тоны сердца ритмичные, пульс 85 в минуту, АД 143/103 мм рт. ст. Живот при па",
+          "start": 1237,
+          "end": 1335
+        }
+      ]
+    },
+    "height": {
+      "value": 185,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "е состояние ближе к средней степени тяжести. Рост 185 см, масса тела 97 кг, ИМТ 28,3 кг/м². Кожа о",
+          "start": 1087,
+          "end": 1185
+        }
+      ]
+    },
+    "rr": {
+      "value": 17,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "чной окраски, влажная. Дыхание везикулярное. ЧДД 17 в минуту, SpO2 95%. Тоны сердца ритмичные, п",
+          "start": 1187,
+          "end": 1283
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "профессиональная деятельность сопровождалась стрессом. Повышение АД отмечает несколько лет. Курит. Лекарственная аллергия со слов пациента не отмечалась. Ранее выполненные операции и переливания крови не уточняет.",
+          "start": 852,
+          "end": 1065
+        }
+      ]
+    },
+    "spo2": {
+      "value": 95,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "жная. Дыхание везикулярное. ЧДД 17 в минуту, SpO2 95%. Тоны сердца ритмичные, пульс 85 в минуту,",
+          "start": 1204,
+          "end": 1300
+        }
+      ]
+    },
+    "weight": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лиже к средней степени тяжести. Рост 185 см, масса тела 97 кг, ИМТ 28,3 кг/м². Кожа обычной окраски, вл",
+          "start": 1100,
+          "end": 1203
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 106,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 04.08.2021: синусовый ритм, ЧСС 106 уд/мин. Элевация ST в отведениях II, III, aVF. На",
+          "start": 2633,
+          "end": 2725
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях II, III, aVF",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 04.08.2021: синусовый ритм, ЧСС 106 уд/мин. Элевация ST в отведениях II, III, aVF. На",
+          "start": 2633,
+          "end": 2725
+        }
+      ]
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 04.08.2021: синусовый ритм, ЧСС 106 уд/мин. Элевация ST в отведениях II, III, aVF. На",
+          "start": 2633,
+          "end": 2725
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез нижней стенки ЛЖ"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "05/08/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки 05.08.2021. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Данных за венозный застой в лёгких не получено.",
+          "start": 1496,
+          "end": 1673
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки 05.08.2021. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Данных за венозный застой в лёгких не получено.",
+          "start": 1496,
+          "end": 1673
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "05/08/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "05.08.2021",
+          "start": 1680,
+          "end": 1690
+        }
+      ]
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "05.08.2021 выполнена селективная КАГ. Ствол ЛКА без критического поражения. ПМЖВ: стеноз 83%",
+          "start": 1680,
+          "end": 1772
+        }
+      ]
+    },
+    "ca_lad": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "crea": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "glu": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hb": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ldl": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "leucocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "thrombocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

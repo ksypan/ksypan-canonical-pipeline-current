@@ -1,0 +1,457 @@
+{
+  "document": "control-0163",
+  "fields": {
+    "admission_date": {
+      "value": "08/06/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 08.06.2023 по 17.06.2023.",
+          "start": 194,
+          "end": 253
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "17/06/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 08.06.2023 по 17.06.2023.",
+          "start": 194,
+          "end": 253
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 1,
+        "text": "ХБП 2."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХБП 2.",
+          "start": 414,
+          "end": 420
+        }
+      ]
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.4",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Диагноз. Основной диагноз: ИБС. Острый инфаркт миокарда без подъёма ST. Код МКБ-10 I21.4.",
+          "start": 255,
+          "end": 344
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": 2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip II.",
+          "start": 421,
+          "end": 453
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Острый инфаркт миокарда без подъёма ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 19.2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дней тяжести. Рост 187 см, масса тела 67 кг, ИМТ 19.2 кг/м². Кожа обычной окраски, влажная. Аускул",
+          "start": 500,
+          "end": 598
+        }
+      ]
+    },
+    "bp": {
+      "value": "155/78",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 69 в минуту, АД 155/78 мм рт. ст. Периферические отёки не определяю",
+          "start": 709,
+          "end": 808
+        }
+      ]
+    },
+    "bpm": {
+      "value": 69,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "8 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 69 в минуту, АД 155/78 мм рт. ст. Периферически",
+          "start": 690,
+          "end": 788
+        }
+      ]
+    },
+    "height": {
+      "value": 187,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": ". Состояние при поступлении средней тяжести. Рост 187 см, масса тела 67 кг, ИМТ 19.2 кг/м². Кожа о",
+          "start": 469,
+          "end": 567
+        }
+      ]
+    },
+    "rr": {
+      "value": 18,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "делах выслушиваются единичные влажные хрипы. ЧДД 18 в минуту, SpO2 97%. Тоны сердца ритмичные, п",
+          "start": 640,
+          "end": 736
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Бросил курить"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тивной. Повышение АД отмечает несколько лет. Бросил курить. Лекарственная аллергия со слов пациента не",
+          "start": 1417,
+          "end": 1519
+        }
+      ]
+    },
+    "spo2": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ся единичные влажные хрипы. ЧДД 18 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 69 в минуту,",
+          "start": 657,
+          "end": 753
+        }
+      ]
+    },
+    "weight": {
+      "value": 67,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ри поступлении средней тяжести. Рост 187 см, масса тела 67 кг, ИМТ 19.2 кг/м². Кожа обычной окраски, вл",
+          "start": 482,
+          "end": 585
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "синусовый ритм"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез нижней стенки ЛЖ"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "crea": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "glu": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hb": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ldl": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "leucocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "thrombocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Тикагрелор",
+          "prescription": "90 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Лозартан",
+          "prescription": "50 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

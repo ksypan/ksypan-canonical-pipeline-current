@@ -1,0 +1,126 @@
+{
+  "admission_date": "16/06/2022",
+  "discharge_date": "23/06/2022",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 1,
+    "text": "ХБП 3Б"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "не указано",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС: прогрессирующая стенокардия, нестабильное течение."
+  },
+  "bmi": 23.2,
+  "bp": "129/65",
+  "bpm": 99,
+  "height": 182,
+  "rr": 18,
+  "smoking": {
+    "code": 0,
+    "text": "Бросил курить"
+  },
+  "spo2": 98,
+  "weight": 77,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": "не указано",
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "синусовый ритм"
+  },
+  "echo_ef": 57,
+  "echo_lvd": 58,
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 1,
+    "text": "Митральная регургитация 2 ст."
+  },
+  "echo_zone": {
+    "code": 1,
+    "text": "Гипокинез нижней стенки ЛЖ"
+  },
+  "rg_date": "18/06/2022",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "Y",
+  "ca_lad": 0,
+  "rca": 0,
+  "card_trop": "отрицательный",
+  "crea": "не указано",
+  "glu": "не указано",
+  "hb": "не указано",
+  "ldl": "не указано",
+  "leucocytes": "не указано",
+  "thrombocytes": "не указано",
+  "tot_chol": "не указано",
+  "2_aag": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    },
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Периндоприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Бисопролол",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

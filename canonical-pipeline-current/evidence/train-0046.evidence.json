@@ -1,0 +1,517 @@
+{
+  "document": "train-0046",
+  "fields": {
+    "admission_date": {
+      "value": "02/04/2020",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Дата госпитализации 02.04.2020",
+          "start": 204,
+          "end": 234
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "09/04/2020",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дата выписки 09.04.2020.",
+          "start": 236,
+          "end": 260
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I20.0",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: ИБС: прогрессирующая стенокардия, нестабильное течение. Код МКБ-10 I20.0.",
+          "start": 1317,
+          "end": 1408
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС: прогрессирующая стенокардия, нестабильное течение."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "160/70",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": ". Тоны сердца ритмичные, пульс 106 в минуту, АД 160/70 мм рт. ст. Живот мягкий, безболезненный. Диу",
+          "start": 1087,
+          "end": 1186
+        }
+      ]
+    },
+    "bpm": {
+      "value": 106,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "2 в минуту, SpO2 96%. Тоны сердца ритмичные, пульс 106 в минуту, АД 160/70 мм рт. ст. Живот мягкий,",
+          "start": 1067,
+          "end": 1166
+        }
+      ]
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": 22,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "В лёгких дыхание проводится с обеих сторон. ЧДД 22 в минуту, SpO2 96%. Тоны сердца ритмичные, п",
+          "start": 1018,
+          "end": 1113
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Не курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "часто находился в длительных поездках. Не курит. Лекарственная аллергия со слов пациента не отмечалась. Сведения о наследственных сердечно-сосудистых заболеваниях не представлены.",
+          "start": 746,
+          "end": 925
+        }
+      ]
+    },
+    "spo2": {
+      "value": 96,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "проводится с обеих сторон. ЧДД 22 в минуту, SpO2 96%. Тоны сердца ритмичные, пульс 106 в минуту,",
+          "start": 1035,
+          "end": 1131
+        }
+      ]
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 92,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 02.04.2020: синусовый ритм, ЧСС 92 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2155,
+          "end": 2235
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 02.04.2020: синусовый ритм, ЧСС 92 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2155,
+          "end": 2235
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 58,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 41 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2530,
+          "end": 2685
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 58,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 41 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2530,
+          "end": 2685
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 2 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 41 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2530,
+          "end": 2685
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез нижней стенки ЛЖ"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 41 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 58%. Гипокинез нижней стенки ЛЖ. Митральная регургитация 2 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2530,
+          "end": 2685
+        }
+      ]
+    },
+    "rg_date": {
+      "value": "04/04/2020",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 04.04.2020: Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Данных за венозный застой в лёгких не получено.",
+          "start": 1442,
+          "end": 1592
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 04.04.2020: Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Данных за венозный застой в лёгких не получено.",
+          "start": 1442,
+          "end": 1592
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "отрицательный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — отрицательный.",
+          "start": 1770,
+          "end": 1811
+        }
+      ]
+    },
+    "crea": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 97 мкмоль/л",
+          "start": 1747,
+          "end": 1768
+        }
+      ]
+    },
+    "glu": {
+      "value": 5.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 5,5 ммоль/л",
+          "start": 1703,
+          "end": 1722
+        }
+      ]
+    },
+    "hb": {
+      "value": 129,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 129 г/л",
+          "start": 1683,
+          "end": 1701
+        }
+      ]
+    },
+    "ldl": {
+      "value": 3.8,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 3.8 ммоль/л",
+          "start": 1662,
+          "end": 1681
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 6.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 02.04.2020: лейкоциты 6.5 ×10⁹/л",
+          "start": 1607,
+          "end": 1660
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 310,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 310 ×10⁹/л",
+          "start": 1724,
+          "end": 1745
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

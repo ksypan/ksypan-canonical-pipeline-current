@@ -1,0 +1,122 @@
+{
+  "admission_date": "26/04/2023",
+  "discharge_date": "02/05/2023",
+  "art_hyper": {
+    "code": 1,
+    "text": "Гипертоническая болезнь II стадии"
+  },
+  "atr_fibril": {
+    "code": 1,
+    "text": "Фибрилляция предсердий, постоянная форма"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "не указано",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС. Острый инфаркт миокарда без подъёма ST."
+  },
+  "bmi": 27.5,
+  "bp": "137/99",
+  "bpm": 72,
+  "height": 177,
+  "rr": 20,
+  "smoking": {
+    "code": 0,
+    "text": "Не курит"
+  },
+  "spo2": 92,
+  "weight": 86,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 63,
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Фибрилляция предсердий"
+  },
+  "echo_ef": 40,
+  "echo_lvd": 46,
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 1,
+    "text": "Митральная регургитация 2 ст."
+  },
+  "echo_zone": {
+    "code": 1,
+    "text": "Гипокинез нижней стенки ЛЖ"
+  },
+  "rg_date": "не указано",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "Y",
+  "ca_lad": 0,
+  "rca": 1,
+  "card_trop": "положительный",
+  "crea": 89,
+  "glu": 4.9,
+  "hb": 113,
+  "ldl": 4.4,
+  "leucocytes": 6,
+  "thrombocytes": "не указано",
+  "tot_chol": 5.9,
+  "2_aag": [
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Лозартан",
+      "prescription": "50 мг утром"
+    }
+  ],
+  "anticoagulant": [
+    {
+      "name": "Апиксабан",
+      "prescription": "5 мг 2 раза в день"
+    }
+  ],
+  "aspirin": 0,
+  "bb": [
+    {
+      "name": "Метопролол",
+      "prescription": "50 мг 2 раза в день"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

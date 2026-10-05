@@ -1,0 +1,457 @@
+{
+  "document": "control-0336",
+  "fields": {
+    "admission_date": {
+      "value": "13/05/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Отделение кардиологии. Поступил: 13.05.2021, выписан: 21.05.2021.",
+          "start": 143,
+          "end": 208
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "21/05/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Отделение кардиологии. Поступил: 13.05.2021, выписан: 21.05.2021.",
+          "start": 143,
+          "end": 208
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 2А"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС: прогрессирующая стенокардия, нестабильное течение."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 27.9,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дней тяжести. Рост 163 см, масса тела 74 кг, ИМТ 27.9 кг/м². Кожные покровы чистые, обычной окраск",
+          "start": 1022,
+          "end": 1120
+        }
+      ]
+    },
+    "bp": {
+      "value": "167/100",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": ". Тоны сердца ритмичные, пульс 108 в минуту, АД 167/100 мм рт. ст. Периферические отёки не определяю",
+          "start": 1192,
+          "end": 1292
+        }
+      ]
+    },
+    "bpm": {
+      "value": 108,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "3 в минуту, SpO2 99%. Тоны сердца ритмичные, пульс 108 в минуту, АД 167/100 мм рт. ст. Периферическ",
+          "start": 1172,
+          "end": 1271
+        }
+      ]
+    },
+    "height": {
+      "value": 163,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Состояние при поступлении средней тяжести. Рост 163 см, масса тела 74 кг, ИМТ 27.9 кг/м². Кожные",
+          "start": 993,
+          "end": 1089
+        }
+      ]
+    },
+    "rr": {
+      "value": 23,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "В лёгких дыхание проводится с обеих сторон. ЧДД 23 в минуту, SpO2 99%. Тоны сердца ритмичные, п",
+          "start": 1123,
+          "end": 1218
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "участвовал в продолжительных морских и сухопутных походах. Курит. Лекарственная аллергия со слов пациента не отмечалась. Ранее выполненные операции и переливания крови не уточняет.",
+          "start": 796,
+          "end": 976
+        }
+      ]
+    },
+    "spo2": {
+      "value": 99,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "проводится с обеих сторон. ЧДД 23 в минуту, SpO2 99%. Тоны сердца ритмичные, пульс 108 в минуту,",
+          "start": 1140,
+          "end": 1236
+        }
+      ]
+    },
+    "weight": {
+      "value": 74,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ри поступлении средней тяжести. Рост 163 см, масса тела 74 кг, ИМТ 27.9 кг/м². Кожные покровы чистые, о",
+          "start": 1004,
+          "end": 1107
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 72,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (13.05.2021): синусовый ритм, ЧСС 72 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2218,
+          "end": 2316
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (13.05.2021): синусовый ритм, ЧСС 72 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 2218,
+          "end": 2316
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки 13.05.2021. Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Признаков отёка лёгких не выявлено.",
+          "start": 2400,
+          "end": 2546
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "N",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "отрицательный",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "crea": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "glu": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hb": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ldl": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "leucocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "thrombocytes": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Лозартан",
+          "prescription": "50 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

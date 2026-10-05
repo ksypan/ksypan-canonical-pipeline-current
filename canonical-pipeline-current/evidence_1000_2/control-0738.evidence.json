@@ -1,0 +1,547 @@
+{
+  "document": "control-0738",
+  "fields": {
+    "admission_date": {
+      "value": "15/11/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Дата госпитализации 15.11.2023",
+          "start": 199,
+          "end": 229
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "24/11/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дата выписки 24.11.2023.",
+          "start": 231,
+          "end": 255
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I20.0",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: ИБС. Нестабильная стенокардия. Код МКБ-10 I20.0.",
+          "start": 1398,
+          "end": 1464
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 1,
+        "text": "Сахарный диабет 2 типа"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Сахарный диабет 2 типа",
+          "start": 1547,
+          "end": 1569
+        }
+      ]
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 1, ФК 2."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХСН 1, ФК 2.",
+          "start": 1571,
+          "end": 1583
+        }
+      ]
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Нестабильная стенокардия."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 32.2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "пени тяжести. Рост 170 см, масса тела 93 кг, ИМТ 32,2 кг/м². Видимые слизистые без особенностей. Д",
+          "start": 1007,
+          "end": 1105
+        }
+      ]
+    },
+    "bp": {
+      "value": "134/97",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 68 в минуту, АД 134/97 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 1150,
+          "end": 1249
+        }
+      ]
+    },
+    "bpm": {
+      "value": 68,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "3 в минуту, SpO2 99%. Тоны сердца ритмичные, пульс 68 в минуту, АД 134/97 мм рт. ст. Живот при пал",
+          "start": 1131,
+          "end": 1229
+        }
+      ]
+    },
+    "height": {
+      "value": 170,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "е состояние ближе к средней степени тяжести. Рост 170 см, масса тела 93 кг, ИМТ 32,2 кг/м². Видимы",
+          "start": 976,
+          "end": 1074
+        }
+      ]
+    },
+    "rr": {
+      "value": 23,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "стые без особенностей. Дыхание везикулярное. ЧДД 23 в минуту, SpO2 99%. Тоны сердца ритмичные, п",
+          "start": 1081,
+          "end": 1177
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "рузкой. Повышение АД отмечает несколько лет. Курит. Лекарственная аллергия со слов пациента не",
+          "start": 776,
+          "end": 870
+        }
+      ]
+    },
+    "spo2": {
+      "value": 99,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "стей. Дыхание везикулярное. ЧДД 23 в минуту, SpO2 99%. Тоны сердца ритмичные, пульс 68 в минуту,",
+          "start": 1098,
+          "end": 1194
+        }
+      ]
+    },
+    "weight": {
+      "value": 93,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лиже к средней степени тяжести. Рост 170 см, масса тела 93 кг, ИМТ 32,2 кг/м². Видимые слизистые без ос",
+          "start": 989,
+          "end": 1092
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 65,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 15.11.2023: синусовый ритм, ЧСС 65 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 1705,
+          "end": 1785
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 15.11.2023: синусовый ритм, ЧСС 65 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 1705,
+          "end": 1785
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 57,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 47 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 57%. Митральная регургитация 1 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2663,
+          "end": 2790
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 50,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 47 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 57%. Митральная регургитация 1 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2663,
+          "end": 2790
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 1 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "По данным ЭхоКГ: ЛП 47 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 57%. Митральная регургитация 1 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2663,
+          "end": 2790
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "15/11/2023",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "15.11.2023",
+          "start": 1852,
+          "end": 1862
+        }
+      ]
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "15.11.2023 выполнена селективная КАГ. Ствол ЛКА без критического поражения. ПМЖВ: гемодинамически значимого стеноза нет",
+          "start": 1852,
+          "end": 1971
+        }
+      ]
+    },
+    "ca_lad": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "отрицательный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — отрицательный",
+          "start": 2279,
+          "end": 2319
+        }
+      ]
+    },
+    "crea": {
+      "value": 102,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 102 мкмоль/л",
+          "start": 2162,
+          "end": 2184
+        }
+      ]
+    },
+    "glu": {
+      "value": 8.6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 8.6 ммоль/л.",
+          "start": 2321,
+          "end": 2341
+        }
+      ]
+    },
+    "hb": {
+      "value": 144,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 144 г/л",
+          "start": 2238,
+          "end": 2256
+        }
+      ]
+    },
+    "ldl": {
+      "value": 3.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 3,4 ммоль/л",
+          "start": 2258,
+          "end": 2277
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 8,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 8,0 ×10⁹/л",
+          "start": 2216,
+          "end": 2236
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 251,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 15.11.2023: тромбоциты 251 ×10⁹/л",
+          "start": 2106,
+          "end": 2160
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 5.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 5,3 ммоль/л",
+          "start": 2186,
+          "end": 2214
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

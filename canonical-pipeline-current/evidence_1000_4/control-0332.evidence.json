@@ -1,0 +1,488 @@
+{
+  "document": "control-0332",
+  "fields": {
+    "admission_date": {
+      "value": "21/01/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Отделение неотложной кардиологии. Поступил: 21.01.2022, выписан: 01.02.2022.",
+          "start": 178,
+          "end": 254
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "01/02/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Отделение неотложной кардиологии. Поступил: 21.01.2022, выписан: 01.02.2022.",
+          "start": 178,
+          "end": 254
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.2",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: Острый инфаркт миокарда боковой стенки, с элевацией ST. Код МКБ-10 I21.2.",
+          "start": 264,
+          "end": 355
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": 3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip III.",
+          "start": 438,
+          "end": 471
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "боковой стенки"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "Острый инфаркт миокарда боковой стенки, с элевацией ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "137/79",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 88 в минуту, АД 137/79 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 688,
+          "end": 787
+        }
+      ]
+    },
+    "bpm": {
+      "value": 88,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "2 в минуту, SpO2 91%. Тоны сердца ритмичные, пульс 88 в минуту, АД 137/79 мм рт. ст. Живот при пал",
+          "start": 669,
+          "end": 767
+        }
+      ]
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": 22,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "жные хрипы выслушиваются до средних отделов. ЧДД 22 в минуту, SpO2 91%. Тоны сердца ритмичные, п",
+          "start": 619,
+          "end": 715
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "spo2": {
+      "value": 91,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "иваются до средних отделов. ЧДД 22 в минуту, SpO2 91%. Тоны сердца ритмичные, пульс 88 в минуту,",
+          "start": 636,
+          "end": 732
+        }
+      ]
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 92,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (21.01.2022): синусовый ритм, ЧСС 92 уд/мин. Подъём сегмента ST в I, aVL, V5–V6. На",
+          "start": 2724,
+          "end": 2830
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях I, aVL, V5–V6",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (21.01.2022): синусовый ритм, ЧСС 92 уд/мин. Подъём сегмента ST в I, aVL, V5–V6. На",
+          "start": 2724,
+          "end": 2830
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "21/01/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки 21.01.2022. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Заключение: Признаки интерстициального отёка лёгких.",
+          "start": 1858,
+          "end": 2040
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 1,
+        "text": "Рентгенография грудной клетки 21.01.2022. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Заключение: Признаки интерстициального отёка лёгких."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки 21.01.2022. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Заключение: Признаки интерстициального отёка лёгких.",
+          "start": 1858,
+          "end": 2040
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — положительный",
+          "start": 2163,
+          "end": 2203
+        }
+      ]
+    },
+    "crea": {
+      "value": 87,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 87 мкмоль/л",
+          "start": 2205,
+          "end": 2226
+        }
+      ]
+    },
+    "glu": {
+      "value": 4.9,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 4,9 ммоль/л",
+          "start": 2122,
+          "end": 2141
+        }
+      ]
+    },
+    "hb": {
+      "value": 138,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 138 г/л",
+          "start": 2143,
+          "end": 2161
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 21.01.2022: ХС-ЛПНП 4.6 ммоль/л",
+          "start": 2068,
+          "end": 2120
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 8.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 8.5 ×10⁹/л.",
+          "start": 2251,
+          "end": 2272
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 199,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 199 ×10⁹/л",
+          "start": 2228,
+          "end": 2249
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

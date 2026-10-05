@@ -1,0 +1,523 @@
+{
+  "document": "control-0642",
+  "fields": {
+    "admission_date": {
+      "value": "25/11/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Дата госпитализации 25.11.2022",
+          "start": 159,
+          "end": 189
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "29/11/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дата выписки 29.11.2022.",
+          "start": 191,
+          "end": 215
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "Гипертоническая болезнь"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.2",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: Острый инфаркт миокарда боковой стенки, с элевацией ST. Код МКБ-10 I21.2.",
+          "start": 1198,
+          "end": 1289
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 1,
+        "text": "Сахарный диабет 2 типа"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Сахарный диабет 2 типа",
+          "start": 1372,
+          "end": 1394
+        }
+      ]
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 2А, ФК 3."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХСН 2А, ФК 3.",
+          "start": 1396,
+          "end": 1409
+        }
+      ]
+    },
+    "killip": {
+      "value": 1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip I.",
+          "start": 1410,
+          "end": 1441
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "боковой стенки"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "Острый инфаркт миокарда боковой стенки, с элевацией ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "179/85",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 89 в минуту, АД 179/85 мм рт. ст. Периферические отёки не определяю",
+          "start": 995,
+          "end": 1094
+        }
+      ]
+    },
+    "bpm": {
+      "value": 89,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "3 в минуту, SpO2 95%. Тоны сердца ритмичные, пульс 89 в минуту, АД 179/85 мм рт. ст. Периферически",
+          "start": 976,
+          "end": 1074
+        }
+      ]
+    },
+    "height": {
+      "value": 178,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Состояние при поступлении средней тяжести. Рост 178 см, масса тела 101 кг. Видимые слизистые без",
+          "start": 838,
+          "end": 934
+        }
+      ]
+    },
+    "rr": {
+      "value": 23,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "стые без особенностей. Дыхание везикулярное. ЧДД 23 в минуту, SpO2 95%. Тоны сердца ритмичные, п",
+          "start": 926,
+          "end": 1022
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "регулярно участвовал в верховой езде и охоте. Повышение АД отмечает несколько лет. Курит. Лекарственная аллергия со слов пациента не отмечалась. Переносимость назначаемых ранее препаратов без известных особенностей.",
+          "start": 604,
+          "end": 819
+        }
+      ]
+    },
+    "spo2": {
+      "value": 95,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "стей. Дыхание везикулярное. ЧДД 23 в минуту, SpO2 95%. Тоны сердца ритмичные, пульс 89 в минуту,",
+          "start": 943,
+          "end": 1039
+        }
+      ]
+    },
+    "weight": {
+      "value": 101,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ри поступлении средней тяжести. Рост 178 см, масса тела 101 кг. Видимые слизистые без особенностей. Дыха",
+          "start": 849,
+          "end": 953
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях I, aVL, V5–V6",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "синусовый ритм"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез боковой стенки ЛЖ"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "27/11/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 27.11.2022: Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Признаков отёка лёгких не выявлено.",
+          "start": 2493,
+          "end": 2650
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 27.11.2022: Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Признаков отёка лёгких не выявлено.",
+          "start": 2493,
+          "end": 2650
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "27/11/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "27.11.2022",
+          "start": 2656,
+          "end": 2666
+        }
+      ]
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "27.11.2022 выполнена селективная КАГ. Ствол ЛКА без критического поражения. ПМЖВ: стеноз 77%",
+          "start": 2656,
+          "end": 2748
+        }
+      ]
+    },
+    "ca_lad": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 25.11.2022: первый тропониновый тест — положительный",
+          "start": 1469,
+          "end": 1542
+        }
+      ]
+    },
+    "crea": {
+      "value": 104,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 104 мкмоль/л",
+          "start": 1637,
+          "end": 1659
+        }
+      ]
+    },
+    "glu": {
+      "value": 8.6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 8.6 ммоль/л",
+          "start": 1544,
+          "end": 1563
+        }
+      ]
+    },
+    "hb": {
+      "value": 125,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 125 г/л",
+          "start": 1617,
+          "end": 1635
+        }
+      ]
+    },
+    "ldl": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "leucocytes": {
+      "value": 6.1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 6,1 ×10⁹/л",
+          "start": 1565,
+          "end": 1585
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 177,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 177 ×10⁹/л.",
+          "start": 1661,
+          "end": 1683
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 6.2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 6.2 ммоль/л",
+          "start": 1587,
+          "end": 1615
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

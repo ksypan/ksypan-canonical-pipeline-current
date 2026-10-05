@@ -1,0 +1,126 @@
+{
+  "admission_date": "19/03/2024",
+  "discharge_date": "31/03/2024",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "не указано",
+  "dm": {
+    "code": 1,
+    "text": "Сахарный диабет 2 типа"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС. Острый инфаркт миокарда без подъёма ST."
+  },
+  "bmi": 23.9,
+  "bp": "158/99",
+  "bpm": 97,
+  "height": 183,
+  "rr": 18,
+  "smoking": {
+    "code": 0,
+    "text": "Бросил курить"
+  },
+  "spo2": 97,
+  "weight": 80,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 101,
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Синусовый"
+  },
+  "echo_ef": 46,
+  "echo_lvd": 54,
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 1,
+    "text": "Митральная регургитация 1 ст."
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "не указано",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "N",
+  "ca_lad": "не указано",
+  "rca": "не указано",
+  "card_trop": "положительный",
+  "crea": "не указано",
+  "glu": "не указано",
+  "hb": "не указано",
+  "ldl": "не указано",
+  "leucocytes": "не указано",
+  "thrombocytes": "не указано",
+  "tot_chol": "не указано",
+  "2_aag": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    },
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Периндоприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Метопролол",
+      "prescription": "50 мг 2 раза в день"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Аторвастатин",
+      "prescription": "80 мг вечером"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "admission_date": "17/01/2024",
+  "discharge_date": "25/01/2024",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 1,
+    "text": "Фибрилляция предсердий, постоянная форма."
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "I21.4",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": 2,
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "Острый коронарный синдром без подъёма ST, инфаркт миокарда."
+  },
+  "bmi": "не указано",
+  "bp": "не указано",
+  "bpm": "не указано",
+  "height": "не указано",
+  "rr": "не указано",
+  "smoking": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "spo2": "не указано",
+  "weight": "не указано",
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 85,
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Фибрилляция предсердий"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "не указано",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "18/01/2024",
+  "ca_fact": "Y",
+  "ca_lad": 0,
+  "rca": 2,
+  "card_trop": "положительный",
+  "crea": 79,
+  "glu": 5.8,
+  "hb": 117,
+  "ldl": 2.7,
+  "leucocytes": 9.1,
+  "thrombocytes": 341,
+  "tot_chol": 6.1,
+  "2_aag": [
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Рамиприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": [
+    {
+      "name": "Ривароксабан",
+      "prescription": "20 мг вечером"
+    }
+  ],
+  "aspirin": 0,
+  "bb": [
+    {
+      "name": "Метопролол",
+      "prescription": "50 мг 2 раза в день"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

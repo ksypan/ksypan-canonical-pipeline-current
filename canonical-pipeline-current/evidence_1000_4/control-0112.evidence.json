@@ -1,0 +1,541 @@
+{
+  "document": "control-0112",
+  "fields": {
+    "admission_date": {
+      "value": "19/09/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Кардиологическое отделение № [REDACTED_DEPARTMENT_NUMBER]. Поступила: 19.09.2022, выписана: 26.09.2022.",
+          "start": 155,
+          "end": 258
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "26/09/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Кардиологическое отделение № [REDACTED_DEPARTMENT_NUMBER]. Поступила: 19.09.2022, выписана: 26.09.2022.",
+          "start": 155,
+          "end": 258
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.2",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: Острый инфаркт миокарда боковой стенки, с элевацией ST. Код МКБ-10 I21.2.",
+          "start": 268,
+          "end": 359
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": 1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip I.",
+          "start": 429,
+          "end": 460
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "боковой стенки"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "Острый инфаркт миокарда боковой стенки, с элевацией ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 24.8,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дней тяжести. Рост 183 см, масса тела 83 кг, ИМТ 24,8 кг/м². Видимые слизистые без особенностей. В",
+          "start": 1160,
+          "end": 1258
+        }
+      ]
+    },
+    "bp": {
+      "value": "169/100",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 99 в минуту, АД 169/100 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 1325,
+          "end": 1425
+        }
+      ]
+    },
+    "bpm": {
+      "value": 99,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "7 в минуту, SpO2 95%. Тоны сердца ритмичные, пульс 99 в минуту, АД 169/100 мм рт. ст. Живот при па",
+          "start": 1306,
+          "end": 1404
+        }
+      ]
+    },
+    "height": {
+      "value": 183,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Состояние при поступлении средней тяжести. Рост 183 см, масса тела 83 кг, ИМТ 24,8 кг/м². Видимы",
+          "start": 1131,
+          "end": 1227
+        }
+      ]
+    },
+    "rr": {
+      "value": 17,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "В лёгких дыхание проводится с обеих сторон. ЧДД 17 в минуту, SpO2 95%. Тоны сердца ритмичные, п",
+          "start": 1257,
+          "end": 1352
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Прекратила курить"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "риятия. Повышение АД отмечает несколько лет. Прекратила курить. Лекарственная аллергия со слов пациентки не",
+          "start": 935,
+          "end": 1042
+        }
+      ]
+    },
+    "spo2": {
+      "value": 95,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "проводится с обеих сторон. ЧДД 17 в минуту, SpO2 95%. Тоны сердца ритмичные, пульс 99 в минуту,",
+          "start": 1274,
+          "end": 1369
+        }
+      ]
+    },
+    "weight": {
+      "value": 83,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ри поступлении средней тяжести. Рост 183 см, масса тела 83 кг, ИМТ 24,8 кг/м². Видимые слизистые без ос",
+          "start": 1142,
+          "end": 1245
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 67,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (19.09.2022): синусовый ритм, ЧСС 67 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1742,
+          "end": 1852
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях I, aVL, V5–V6",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (19.09.2022): синусовый ритм, ЧСС 67 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1742,
+          "end": 1852
+        }
+      ]
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (19.09.2022): синусовый ритм, ЧСС 67 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1742,
+          "end": 1852
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "20/09/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 20.09.2022: Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Данных за венозный застой в лёгких не получено.",
+          "start": 1570,
+          "end": 1720
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 20.09.2022: Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Данных за венозный застой в лёгких не получено.",
+          "start": 1570,
+          "end": 1720
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "21/09/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "21.09.2022",
+          "start": 1943,
+          "end": 1953
+        }
+      ]
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "21.09.2022 выполнена селективная КАГ. Ствол ЛКА без критического поражения. ПМЖВ: окклюзия",
+          "start": 1943,
+          "end": 2033
+        }
+      ]
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — положительный",
+          "start": 2271,
+          "end": 2311
+        }
+      ]
+    },
+    "crea": {
+      "value": 95,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 95 мкмоль/л.",
+          "start": 2420,
+          "end": 2442
+        }
+      ]
+    },
+    "glu": {
+      "value": 5.7,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 5.7 ммоль/л",
+          "start": 2333,
+          "end": 2352
+        }
+      ]
+    },
+    "hb": {
+      "value": 114,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 114 г/л",
+          "start": 2313,
+          "end": 2331
+        }
+      ]
+    },
+    "ldl": {
+      "value": 2.9,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 2,9 ммоль/л",
+          "start": 2399,
+          "end": 2418
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 6.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 6,3 ×10⁹/л",
+          "start": 2377,
+          "end": 2397
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 253,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 253 ×10⁹/л",
+          "start": 2354,
+          "end": 2375
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 4.1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 19.09.2022: общий холестерин 4.1 ммоль/л",
+          "start": 2208,
+          "end": 2269
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Тикагрелор",
+          "prescription": "90 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Рамиприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

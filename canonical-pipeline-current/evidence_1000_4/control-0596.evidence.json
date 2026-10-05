@@ -1,0 +1,512 @@
+{
+  "document": "control-0596",
+  "fields": {
+    "admission_date": {
+      "value": "13/01/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Кардиологическое отделение № [REDACTED_DEPARTMENT_NUMBER]. Поступил: 13.01.2021, выписан: 23.01.2021.",
+          "start": 143,
+          "end": 244
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "23/01/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Кардиологическое отделение № [REDACTED_DEPARTMENT_NUMBER]. Поступил: 13.01.2021, выписан: 23.01.2021.",
+          "start": 143,
+          "end": 244
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I20.0",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: ИБС. Нестабильная стенокардия. Код МКБ-10 I20.0.",
+          "start": 254,
+          "end": 320
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Нестабильная стенокардия."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 22.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "пени тяжести. Рост 181 см, масса тела 73 кг, ИМТ 22,3 кг/м². Кожа обычной окраски, влажная. В лёгк",
+          "start": 1126,
+          "end": 1224
+        }
+      ]
+    },
+    "bp": {
+      "value": "129/70",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": ". Тоны сердца ритмичные, пульс 109 в минуту, АД 129/70 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 1287,
+          "end": 1386
+        }
+      ]
+    },
+    "bpm": {
+      "value": 109,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "6 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 109 в минуту, АД 129/70 мм рт. ст. Живот при пал",
+          "start": 1267,
+          "end": 1366
+        }
+      ]
+    },
+    "height": {
+      "value": 181,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "м осмотре состояние средней степени тяжести. Рост 181 см, масса тела 73 кг, ИМТ 22,3 кг/м². Кожа о",
+          "start": 1095,
+          "end": 1193
+        }
+      ]
+    },
+    "rr": {
+      "value": 16,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "В лёгких дыхание проводится с обеих сторон. ЧДД 16 в минуту, SpO2 97%. Тоны сердца ритмичные, п",
+          "start": 1218,
+          "end": 1313
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "spo2": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "проводится с обеих сторон. ЧДД 16 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 109 в минуту,",
+          "start": 1235,
+          "end": 1331
+        }
+      ]
+    },
+    "weight": {
+      "value": 73,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тояние средней степени тяжести. Рост 181 см, масса тела 73 кг, ИМТ 22,3 кг/м². Кожа обычной окраски, вл",
+          "start": 1108,
+          "end": 1211
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 1,
+        "text": "имеются неспецифические изменения реполяризации. АВ-блокада I степени."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "имеются неспецифические изменения реполяризации. АВ-блокада I степени.",
+          "start": 1925,
+          "end": 1995
+        }
+      ]
+    },
+    "ecg_bpm": {
+      "value": 77,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (13.01.2021): синусовый ритм, ЧСС 77 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 1825,
+          "end": 1923
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "На ЭКГ при поступлении (13.01.2021): синусовый ритм, ЧСС 77 уд/мин. Подъёма ST не зарегистрировано",
+          "start": 1825,
+          "end": 1923
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "14/01/2021",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки 14.01.2021. Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Признаков отёка лёгких не выявлено.",
+          "start": 2009,
+          "end": 2155
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки 14.01.2021. Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Признаков отёка лёгких не выявлено.",
+          "start": 2009,
+          "end": 2155
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "отрицательный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — отрицательный.",
+          "start": 2500,
+          "end": 2541
+        }
+      ]
+    },
+    "crea": {
+      "value": 76,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 76 мкмоль/л",
+          "start": 2391,
+          "end": 2412
+        }
+      ]
+    },
+    "glu": {
+      "value": 6.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 6.5 ммоль/л",
+          "start": 2370,
+          "end": 2389
+        }
+      ]
+    },
+    "hb": {
+      "value": 113,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 113 г/л",
+          "start": 2480,
+          "end": 2498
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 4.4 ммоль/л",
+          "start": 2459,
+          "end": 2478
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 7.7,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 7.7 ×10⁹/л",
+          "start": 2414,
+          "end": 2434
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 175,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 175 ×10⁹/л",
+          "start": 2436,
+          "end": 2457
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 5.8,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "В анализах крови на момент госпитализации: общий холестерин 5,8 ммоль/л",
+          "start": 2297,
+          "end": 2368
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

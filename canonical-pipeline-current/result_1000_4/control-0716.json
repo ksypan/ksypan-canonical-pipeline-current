@@ -1,0 +1,121 @@
+{
+  "admission_date": "07/01/2021",
+  "discharge_date": "13/01/2021",
+  "art_hyper": {
+    "code": 1,
+    "text": "Гипертоническая болезнь II стадии"
+  },
+  "atr_fibril": {
+    "code": 1,
+    "text": "Фибрилляция предсердий, постоянная форма"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "не указано",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС: прогрессирующая стенокардия, нестабильное течение"
+  },
+  "bmi": 30.5,
+  "bp": "149/90",
+  "bpm": 82,
+  "height": 160,
+  "rr": 21,
+  "smoking": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "spo2": 99,
+  "weight": 78,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 102,
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Фибрилляция предсердий"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "09/01/2021",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "R",
+  "ca_lad": "не указано",
+  "rca": "не указано",
+  "card_trop": "отрицательный",
+  "crea": 79,
+  "glu": 5.2,
+  "hb": 148,
+  "ldl": 2,
+  "leucocytes": 8.7,
+  "thrombocytes": 244,
+  "tot_chol": 6.9,
+  "2_aag": [
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    },
+    {
+      "name": "Ривароксабан",
+      "prescription": "20 мг вечером"
+    }
+  ],
+  "ace_ing_sartan": 0,
+  "anticoagulant": [
+    {
+      "name": "Ривароксабан",
+      "prescription": "20 мг вечером"
+    }
+  ],
+  "aspirin": 0,
+  "bb": [
+    {
+      "name": "Бисопролол",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

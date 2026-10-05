@@ -1,0 +1,126 @@
+{
+  "admission_date": "21/05/2021",
+  "discharge_date": "31/05/2021",
+  "art_hyper": {
+    "code": 1,
+    "text": "Сопутствующие диагнозы: Гипертоническая болезнь II стадии"
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 1,
+    "text": "ХОБЛ вне обострения"
+  },
+  "diagnosis_icd": "I20.0",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 1,
+    "text": "ХСН 1, ФК 2."
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС. Нестабильная стенокардия."
+  },
+  "bmi": 22.8,
+  "bp": "157/66",
+  "bpm": 94,
+  "height": 179,
+  "rr": 19,
+  "smoking": {
+    "code": 1,
+    "text": "Курит"
+  },
+  "spo2": 99,
+  "weight": 73,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": "не указано",
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "синусовый ритм"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "22/05/2021",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "N",
+  "ca_lad": "не указано",
+  "rca": "не указано",
+  "card_trop": "отрицательный",
+  "crea": 109,
+  "glu": 6.3,
+  "hb": 126,
+  "ldl": 2.1,
+  "leucocytes": 7.4,
+  "thrombocytes": 234,
+  "tot_chol": 5.8,
+  "2_aag": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    },
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Рамиприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Бисопролол",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

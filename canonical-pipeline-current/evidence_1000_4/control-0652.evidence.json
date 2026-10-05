@@ -1,0 +1,536 @@
+{
+  "document": "control-0652",
+  "fields": {
+    "admission_date": {
+      "value": "05/09/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Кардиологическое отделение № [REDACTED_DEPARTMENT_NUMBER]. Поступила: 05.09.2022, выписана: 14.09.2022.",
+          "start": 145,
+          "end": 248
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "14/09/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Кардиологическое отделение № [REDACTED_DEPARTMENT_NUMBER]. Поступила: 05.09.2022, выписана: 14.09.2022.",
+          "start": 145,
+          "end": 248
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "Фоновые и сопутствующие заболевания: Гипертоническая болезнь II стадии"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Фоновые и сопутствующие заболевания: Гипертоническая болезнь II стадии",
+          "start": 385,
+          "end": 455
+        }
+      ]
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 1,
+        "text": "ХОБЛ вне обострения."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХОБЛ вне обострения.",
+          "start": 457,
+          "end": 477
+        }
+      ]
+    },
+    "diagnosis_icd": {
+      "value": "I21.2",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Основной диагноз: ИБС. Острый инфаркт миокарда боковой стенки левого желудочка с подъёмом ST. Код МКБ-10 I21.2.",
+          "start": 273,
+          "end": 384
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": 2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip II.",
+          "start": 478,
+          "end": 510
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "боковой стенки левого желудочка"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Острый инфаркт миокарда боковой стенки левого желудочка с подъёмом ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 26.6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "пени тяжести. Рост 155 см, масса тела 64 кг, ИМТ 26,6 кг/м². Видимые слизистые без особенностей. А",
+          "start": 564,
+          "end": 662
+        }
+      ]
+    },
+    "bp": {
+      "value": "166/70",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 92 в минуту, АД 166/70 мм рт. ст. Периферические отёки не определяю",
+          "start": 778,
+          "end": 877
+        }
+      ]
+    },
+    "bpm": {
+      "value": 92,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "8 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 92 в минуту, АД 166/70 мм рт. ст. Периферически",
+          "start": 759,
+          "end": 857
+        }
+      ]
+    },
+    "height": {
+      "value": 155,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "е состояние ближе к средней степени тяжести. Рост 155 см, масса тела 64 кг, ИМТ 26,6 кг/м². Видимы",
+          "start": 533,
+          "end": 631
+        }
+      ]
+    },
+    "rr": {
+      "value": 18,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "делах выслушиваются единичные влажные хрипы. ЧДД 18 в минуту, SpO2 97%. Тоны сердца ритмичные, п",
+          "start": 709,
+          "end": 805
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Прекратила курить"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "описей. Повышение АД отмечает несколько лет. Прекратила курить. Лекарственная аллергия со слов пациентки не",
+          "start": 1368,
+          "end": 1475
+        }
+      ]
+    },
+    "spo2": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ся единичные влажные хрипы. ЧДД 18 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 92 в минуту,",
+          "start": 726,
+          "end": 822
+        }
+      ]
+    },
+    "weight": {
+      "value": 64,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лиже к средней степени тяжести. Рост 155 см, масса тела 64 кг, ИМТ 26,6 кг/м². Видимые слизистые без ос",
+          "start": 546,
+          "end": 649
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 1,
+        "text": "АВ-блокада I степени"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 109,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 05.09.2022: синусовый ритм, ЧСС 109 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1733,
+          "end": 1826
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях I, aVL, V5–V6",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 05.09.2022: синусовый ритм, ЧСС 109 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1733,
+          "end": 1826
+        }
+      ]
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 05.09.2022: синусовый ритм, ЧСС 109 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1733,
+          "end": 1826
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "07/09/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 07.09.2022: Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Заключение: Признаки венозного застоя в лёгких.",
+          "start": 1577,
+          "end": 1727
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 1,
+        "text": "Рентгенограмма ОГК от 07.09.2022: Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Заключение: Признаки венозного застоя в лёгких."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 07.09.2022: Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Заключение: Признаки венозного застоя в лёгких.",
+          "start": 1577,
+          "end": 1727
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 05.09.2022: первый тропониновый тест — положительный",
+          "start": 2047,
+          "end": 2120
+        }
+      ]
+    },
+    "crea": {
+      "value": 77,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 77 мкмоль/л",
+          "start": 2217,
+          "end": 2238
+        }
+      ]
+    },
+    "glu": {
+      "value": 4.7,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 4.7 ммоль/л",
+          "start": 2240,
+          "end": 2259
+        }
+      ]
+    },
+    "hb": {
+      "value": 142,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 142 г/л",
+          "start": 2152,
+          "end": 2170
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 4.3 ммоль/л.",
+          "start": 2261,
+          "end": 2281
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 8.7,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 8.7 ×10⁹/л",
+          "start": 2195,
+          "end": 2215
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 327,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 327 ×10⁹/л",
+          "start": 2172,
+          "end": 2193
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 6,0 ммоль/л",
+          "start": 2122,
+          "end": 2150
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Клопидогрел",
+          "prescription": "75 мг 1 раз в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

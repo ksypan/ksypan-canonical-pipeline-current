@@ -1,0 +1,487 @@
+{
+  "document": "train-0095",
+  "fields": {
+    "admission_date": {
+      "value": "21/11/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 21.11.2024 по 03.12.2024.",
+          "start": 160,
+          "end": 219
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "03/12/2024",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 21.11.2024 по 03.12.2024.",
+          "start": 160,
+          "end": 219
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "ГБ II ст."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "dm": {
+      "value": {
+        "code": 1,
+        "text": "Сахарный диабет 2 типа"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 1,
+        "text": "ХСН 1, ФК 2"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Острый инфаркт миокарда без подъёма ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bp": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "height": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rr": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "smoking": {
+      "value": {
+        "code": 1,
+        "text": "Курит"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "неоднократно меняла место проживания. Повышение АД отмечает несколько лет. Курит. Лекарственная аллергия со слов пациентки не отмечалась. Ранее выполненные операции и переливания крови не уточняет.",
+          "start": 1431,
+          "end": 1628
+        }
+      ]
+    },
+    "spo2": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "weight": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 1,
+        "text": "ЭКГ от 21.11.2024: синусовый ритм, ЧСС 98 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса. АВ-блокада I степени."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 21.11.2024: синусовый ритм, ЧСС 98 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса. АВ-блокада I степени.",
+          "start": 2355,
+          "end": 2504
+        }
+      ]
+    },
+    "ecg_bpm": {
+      "value": 98,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 21.11.2024: синусовый ритм, ЧСС 98 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса. АВ-блокада I степени.",
+          "start": 2355,
+          "end": 2504
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевации ST нет",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 21.11.2024: синусовый ритм, ЧСС 98 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса. АВ-блокада I степени.",
+          "start": 2355,
+          "end": 2504
+        }
+      ]
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 21.11.2024: синусовый ритм, ЧСС 98 уд/мин. Элевации ST нет, отмечаются изменения конечной части желудочкового комплекса. АВ-блокада I степени.",
+          "start": 2355,
+          "end": 2504
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 41,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография. По данным ЭхоКГ: ЛП 43 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 41%. Митральная регургитация 1 ст. Перикардиальный выпот не выявлен",
+          "start": 1630,
+          "end": 1761
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 58,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография. По данным ЭхоКГ: ЛП 43 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 41%. Митральная регургитация 1 ст. Перикардиальный выпот не выявлен",
+          "start": 1630,
+          "end": 1761
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 1 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография. По данным ЭхоКГ: ЛП 43 мм, КДР ЛЖ 58 мм, ФВ ЛЖ 41%. Митральная регургитация 1 ст. Перикардиальный выпот не выявлен",
+          "start": 1630,
+          "end": 1761
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "N",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Анализы крови. При поступлении (21.11.2024) получены результаты: первый тропониновый тест — положительный",
+          "start": 1810,
+          "end": 1915
+        }
+      ]
+    },
+    "crea": {
+      "value": 91,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 91 мкмоль/л.",
+          "start": 2055,
+          "end": 2077
+        }
+      ]
+    },
+    "glu": {
+      "value": 8,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 8,0 ммоль/л",
+          "start": 1917,
+          "end": 1936
+        }
+      ]
+    },
+    "hb": {
+      "value": 123,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 123 г/л",
+          "start": 1991,
+          "end": 2009
+        }
+      ]
+    },
+    "ldl": {
+      "value": 2.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 2.5 ммоль/л",
+          "start": 2011,
+          "end": 2030
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 10.3,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 10,3 ×10⁹/л",
+          "start": 2032,
+          "end": 2053
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 210,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 210 ×10⁹/л",
+          "start": 1968,
+          "end": 1989
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 4.7,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 4,7 ммоль/л",
+          "start": 1938,
+          "end": 1966
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        },
+        {
+          "name": "Тикагрелор",
+          "prescription": "90 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Периндоприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "Ацетилсалициловая кислота",
+          "prescription": "100 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

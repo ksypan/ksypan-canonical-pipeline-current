@@ -1,0 +1,517 @@
+{
+  "document": "control-0742",
+  "fields": {
+    "admission_date": {
+      "value": "07/03/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Дата госпитализации 07.03.2022",
+          "start": 160,
+          "end": 190
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "14/03/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "дата выписки 14.03.2022.",
+          "start": 192,
+          "end": 216
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "dm": {
+      "value": {
+        "code": 1,
+        "text": "Сахарный диабет 2 типа"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "боковой стенки"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "Острый инфаркт миокарда боковой стенки, с элевацией ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 37.2,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ней тяжести. Рост 164 см, масса тела 100 кг, ИМТ 37,2 кг/м². Кожа обычной окраски, влажная. Дыхани",
+          "start": 456,
+          "end": 554
+        }
+      ]
+    },
+    "bp": {
+      "value": "180/71",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": ". Тоны сердца ритмичные, пульс 104 в минуту, АД 180/71 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 595,
+          "end": 694
+        }
+      ]
+    },
+    "bpm": {
+      "value": 104,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "9 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 104 в минуту, АД 180/71 мм рт. ст. Живот при пал",
+          "start": 575,
+          "end": 674
+        }
+      ]
+    },
+    "height": {
+      "value": 164,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Состояние при поступлении средней тяжести. Рост 164 см, масса тела 100 кг, ИМТ 37,2 кг/м². Кожа",
+          "start": 426,
+          "end": 521
+        }
+      ]
+    },
+    "rr": {
+      "value": 19,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "чной окраски, влажная. Дыхание везикулярное. ЧДД 19 в минуту, SpO2 97%. Тоны сердца ритмичные, п",
+          "start": 525,
+          "end": 621
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Бросил курить"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "служба была связана с горными переходами и длительными экспедициями. Бросил курить. Лекарственная аллергия со слов пациента не отмечалась. Сведения о наследственных сердечно-сосудистых заболеваниях не представлены.",
+          "start": 1159,
+          "end": 1373
+        }
+      ]
+    },
+    "spo2": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "жная. Дыхание везикулярное. ЧДД 19 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 104 в минуту,",
+          "start": 542,
+          "end": 639
+        }
+      ]
+    },
+    "weight": {
+      "value": 100,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ри поступлении средней тяжести. Рост 164 см, масса тела 100 кг, ИМТ 37,2 кг/м². Кожа обычной окраски, вл",
+          "start": 437,
+          "end": 541
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях I, aVL, V5–V6",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "синусовый ритм"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_ef": {
+      "value": 49,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография выполнена в стационаре: ЛП 44 мм, КДР ЛЖ 56 мм, ФВ ЛЖ 49%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Полости сердца без внутриполостных образований",
+          "start": 2207,
+          "end": 2387
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 56,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография выполнена в стационаре: ЛП 44 мм, КДР ЛЖ 56 мм, ФВ ЛЖ 49%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Полости сердца без внутриполостных образований",
+          "start": 2207,
+          "end": 2387
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 1 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография выполнена в стационаре: ЛП 44 мм, КДР ЛЖ 56 мм, ФВ ЛЖ 49%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Полости сердца без внутриполостных образований",
+          "start": 2207,
+          "end": 2387
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез боковой стенки ЛЖ"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Эхокардиография выполнена в стационаре: ЛП 44 мм, КДР ЛЖ 56 мм, ФВ ЛЖ 49%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Полости сердца без внутриполостных образований",
+          "start": 2207,
+          "end": 2387
+        }
+      ]
+    },
+    "rg_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенограмма ОГК от 08.03.2022: Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Признаков отёка лёгких не выявлено.",
+          "start": 2428,
+          "end": 2585
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "не указано",
+      "source": "finalizer",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ca_lad": {
+      "value": 1,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — положительный.",
+          "start": 1596,
+          "end": 1637
+        }
+      ]
+    },
+    "crea": {
+      "value": 106,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 106 мкмоль/л",
+          "start": 1498,
+          "end": 1520
+        }
+      ]
+    },
+    "glu": {
+      "value": 8.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "глюкоза 8,4 ммоль/л",
+          "start": 1454,
+          "end": 1473
+        }
+      ]
+    },
+    "hb": {
+      "value": 114,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Первичные анализы от 07.03.2022: гемоглобин 114 г/л",
+          "start": 1401,
+          "end": 1452
+        }
+      ]
+    },
+    "ldl": {
+      "value": 3.1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 3.1 ммоль/л",
+          "start": 1545,
+          "end": 1564
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 11.4,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 11.4 ×10⁹/л",
+          "start": 1475,
+          "end": 1496
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 179,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 179 ×10⁹/л",
+          "start": 1522,
+          "end": 1543
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 7.1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 7.1 ммоль/л",
+          "start": 1566,
+          "end": 1594
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Тикагрелор",
+          "prescription": "90 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Лозартан",
+          "prescription": "50 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Метопролол",
+          "prescription": "50 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Аторвастатин",
+          "prescription": "80 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

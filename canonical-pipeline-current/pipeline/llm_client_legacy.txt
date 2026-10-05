@@ -1,0 +1,284 @@
+"""Provider-agnostic LLM client with minimal configuration.
+
+This module handles:
+- API authentication (YandexGPT via IAM token)
+- Request construction with system/user prompts
+- JSON response parsing and validation
+- Retry logic with exponential backoff
+- Timeout handling
+
+The client does NOT:
+- Modify the parser record or field contract
+- Perform any data transformation beyond JSON parsing
+- Cache or store responses
+"""
+
+from __future__ import annotations
+
+import json
+import time
+from collections.abc import Mapping
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+import requests
+
+
+DEFAULT_TIMEOUT = 60
+DEFAULT_MAX_RETRIES = 3
+DEFAULT_BACKOFF = 2.0
+
+# YandexGPT endpoint
+YANDEX_API_URL = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
+
+
+@dataclass(frozen=True)
+class YandexConfig:
+    """YandexGPT configuration."""
+    iam_token: str
+    folder_id: str
+    model: str = "yandexgpt/latest"
+
+    @classmethod
+    def from_env(cls, env_path: Path | None = None) -> "YandexConfig":
+        """Load configuration from environment or .env file."""
+        import os
+        from dotenv import load_dotenv
+
+        if env_path:
+            load_dotenv(env_path)
+        else:
+            load_dotenv()
+
+        iam_token = os.getenv("YANDEX_IAM_TOKEN")
+        folder_id = os.getenv("YANDEX_FOLDER_ID")
+        model = os.getenv("YANDEX_MODEL", "yandexgpt/latest")
+
+        if not iam_token:
+            raise ValueError("YANDEX_IAM_TOKEN not found in environment")
+        if not folder_id:
+            raise ValueError("YANDEX_FOLDER_ID not found in environment")
+
+        return cls(iam_token=iam_token, folder_id=folder_id, model=model)
+
+
+class LLMClientError(Exception):
+    """Base exception for LLM client errors."""
+    pass
+
+
+class LLMTimeoutError(LLMClientError):
+    """Request timed out."""
+    pass
+
+
+class LLMResponseError(LLMClientError):
+    """Invalid or malformed LLM response."""
+    pass
+
+
+def _make_request(
+    system_prompt: str,
+    user_prompt: str,
+    config: YandexConfig,
+    temperature: float = 0.0,
+    max_tokens: int = 4096,
+    timeout: int = DEFAULT_TIMEOUT,
+) -> dict[str, Any]:
+    """Make a single request to YandexGPT API."""
+
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {config.iam_token}",
+        "x-folder-id": config.folder_id,
+    }
+
+    payload = {
+        "modelUri": config.model,
+        "completionOptions": {
+            "stream": False,
+            "temperature": temperature,
+            "maxTokens": max_tokens,
+        },
+        "messages": [
+            {"role": "system", "text": system_prompt},
+            {"role": "user", "text": user_prompt},
+        ],
+    }
+
+    response = requests.post(
+        YANDEX_API_URL,
+        headers=headers,
+        json=payload,
+        timeout=timeout,
+    )
+
+    if response.status_code != 200:
+        try:
+            error_body = response.json()
+        except (json.JSONDecodeError, ValueError):
+            error_body = {"raw": response.text}
+        raise LLMClientError(
+            f"API error {response.status_code}: {error_body}"
+        )
+
+    try:
+        result = response.json()
+    except json.JSONDecodeError as e:
+        raise LLMResponseError(f"Invalid JSON response: {e}") from e
+
+    return result
+
+
+def _parse_response(result: dict[str, Any]) -> dict[str, Any]:
+    """Parse YandexGPT response and extract JSON."""
+
+    # YandexGPT response structure
+    if "result" not in result:
+        raise LLMResponseError("Missing 'result' in API response")
+
+    result_data = result["result"]
+
+    if "alternatives" not in result_data or not result_data["alternatives"]:
+        raise LLMResponseError("No alternatives in response")
+
+    message = result_data["alternatives"][0].get("message", {})
+    text = message.get("text", "")
+
+    if not text:
+        raise LLMResponseError("Empty response text")
+
+    # Try to parse JSON from the response
+    # The model may wrap JSON in markdown code blocks
+    text = text.strip()
+
+    # Remove markdown code blocks if present
+    if text.startswith("```json"):
+        text = text[7:]
+    if text.startswith("```"):
+        text = text[3:]
+    if text.endswith("```"):
+        text = text[:-3]
+
+    text = text.strip()
+
+    try:
+        parsed = json.loads(text)
+    except json.JSONDecodeError as e:
+        raise LLMResponseError(f"Failed to parse JSON: {e}\nResponse text: {text[:500]}") from e
+
+    if not isinstance(parsed, dict):
+        raise LLMResponseError(
+            f"Expected JSON object, got {type(parsed)}: {text[:200]}"
+        )
+
+    return parsed
+
+
+def call_llm(
+    request: Mapping[str, Any],
+    config: YandexConfig | None = None,
+    temperature: float = 0.0,
+    max_completion_tokens: int = 4096,
+    timeout: int = DEFAULT_TIMEOUT,
+    max_retries: int = DEFAULT_MAX_RETRIES,
+    backoff: float = DEFAULT_BACKOFF,
+) -> dict[str, Any]:
+    """Call LLM with retry logic.
+
+    Args:
+        request: LLM request from prompt_builder.build_llm_request()
+        config: YandexGPT configuration (loaded from env if None)
+        temperature: Sampling temperature (0.0 for deterministic)
+        max_completion_tokens: Maximum tokens in response
+        timeout: Request timeout in seconds
+        max_retries: Maximum retry attempts
+        backoff: Exponential backoff multiplier
+
+    Returns:
+        Parsed JSON response from LLM
+
+    Raises:
+        LLMTimeoutError: If request times out after all retries
+        LLMResponseError: If response is invalid or cannot be parsed
+        LLMClientError: For other API errors
+    """
+
+    if not request.get("llm_required"):
+        raise ValueError("LLM not required for this request")
+
+    system_prompt = request.get("system_prompt")
+    user_prompt = request.get("user_prompt")
+
+    if not system_prompt or not user_prompt:
+        raise ValueError("Missing system_prompt or user_prompt in request")
+
+    if config is None:
+        config = YandexConfig.from_env()
+
+    last_error: Exception | None = None
+
+    for attempt in range(max_retries):
+        try:
+            result = _make_request(
+                system_prompt=system_prompt,
+                user_prompt=user_prompt,
+                config=config,
+                temperature=temperature,
+                max_tokens=max_completion_tokens,
+                timeout=timeout,
+            )
+
+            return _parse_response(result)
+
+        except requests.Timeout as e:
+            last_error = LLMTimeoutError(f"Request timed out (attempt {attempt + 1}/{max_retries})")
+            if attempt < max_retries - 1:
+                time.sleep(backoff ** attempt)
+                continue
+            raise last_error from e
+
+        except (LLMResponseError, LLMClientError) as e:
+            last_error = e
+            if attempt < max_retries - 1:
+                time.sleep(backoff ** attempt)
+                continue
+            raise
+
+    # Should not reach here, but just in case
+    if last_error:
+        raise last_error
+    raise LLMClientError("Unknown error after all retries")
+
+
+if __name__ == "__main__":
+    # Simple manual test
+    import argparse
+
+    cli = argparse.ArgumentParser(description="Manual LLM client test")
+    cli.add_argument("--system", type=str, required=True, help="System prompt")
+    cli.add_argument("--user", type=str, required=True, help="User prompt")
+    cli.add_argument("--iam-token", type=str, required=True, help="Yandex IAM token")
+    cli.add_argument("--folder-id", type=str, required=True, help="Yandex folder ID")
+    cli.add_argument("--model", type=str, default="yandexgpt/latest", help="Model name")
+    args = cli.parse_args()
+
+    config = YandexConfig(
+        iam_token=args.iam_token,
+        folder_id=args.folder_id,
+        model=args.model,
+    )
+
+    request = {
+        "llm_required": True,
+        "system_prompt": args.system,
+        "user_prompt": args.user,
+    }
+
+    try:
+        result = call_llm(request, config=config)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    except LLMClientError as e:
+        print(f"Error: {e}", file=__import__("sys").stderr)
+        __import__("sys").exit(1)

@@ -1,0 +1,126 @@
+{
+  "admission_date": "25/11/2021",
+  "discharge_date": "06/12/2021",
+  "art_hyper": {
+    "code": 1,
+    "text": "Гипертоническая болезнь II стадии"
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "не указано",
+  "dm": {
+    "code": 1,
+    "text": "Сахарный диабет 2 типа"
+  },
+  "hf": {
+    "code": 1,
+    "text": "ХСН 2А, ФК 3"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС. Нестабильная стенокардия."
+  },
+  "bmi": 34.1,
+  "bp": "175/72",
+  "bpm": 83,
+  "height": 156,
+  "rr": 19,
+  "smoking": {
+    "code": 1,
+    "text": "Курит"
+  },
+  "spo2": 96,
+  "weight": 83,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": "не указано",
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "синусовый ритм"
+  },
+  "echo_ef": 60,
+  "echo_lvd": 50,
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 1,
+    "text": "Митральная регургитация 1 ст."
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "27/11/2021",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "Y",
+  "ca_lad": 0,
+  "rca": 1,
+  "card_trop": "отрицательный",
+  "crea": 77,
+  "glu": 8.4,
+  "hb": 147,
+  "ldl": 4.6,
+  "leucocytes": 6.4,
+  "thrombocytes": 259,
+  "tot_chol": 6,
+  "2_aag": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    },
+    {
+      "name": "Тикагрелор",
+      "prescription": "90 мг 2 раза в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Периндоприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "Ацетилсалициловая кислота",
+      "prescription": "100 мг утром"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Метопролол",
+      "prescription": "50 мг 2 раза в день"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Аторвастатин",
+      "prescription": "80 мг вечером"
+    }
+  ]
+}

@@ -1,0 +1,577 @@
+{
+  "document": "train-0003",
+  "fields": {
+    "admission_date": {
+      "value": "23/03/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 23.03.2022 по 01.04.2022.",
+          "start": 188,
+          "end": 247
+        }
+      ]
+    },
+    "discharge_date": {
+      "value": "01/04/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "[REDACTED_AGE]. Период лечения: с 23.03.2022 по 01.04.2022.",
+          "start": 188,
+          "end": 247
+        }
+      ]
+    },
+    "art_hyper": {
+      "value": {
+        "code": 1,
+        "text": "Сопутствующие диагнозы: Гипертоническая болезнь II стадии"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Сопутствующие диагнозы: Гипертоническая болезнь II стадии",
+          "start": 370,
+          "end": 427
+        }
+      ]
+    },
+    "atr_fibril": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ckd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "copd": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "diagnosis_icd": {
+      "value": "I21.2",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Диагноз. Основной диагноз: ИБС. Острый инфаркт миокарда боковой стенки левого желудочка с подъёмом ST. Код МКБ-10 I21.2.",
+          "start": 249,
+          "end": 369
+        }
+      ]
+    },
+    "dm": {
+      "value": {
+        "code": 1,
+        "text": "Сахарный диабет 2 типа."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Сахарный диабет 2 типа.",
+          "start": 429,
+          "end": 452
+        }
+      ]
+    },
+    "hf": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "killip": {
+      "value": 1,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "При поступлении класс Killip I.",
+          "start": 453,
+          "end": 484
+        }
+      ]
+    },
+    "mi_localisation": {
+      "value": {
+        "code": 1,
+        "text": "боковой стенки левого желудочка"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "tlt": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "type_acs": {
+      "value": {
+        "code": 1,
+        "text": "ИБС. Острый инфаркт миокарда боковой стенки левого желудочка с подъёмом ST."
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bmi": {
+      "value": 43.6,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ени тяжести. Рост 153 см, масса тела 102 кг, ИМТ 43.6 кг/м². Кожные покровы чистые, обычной окраск",
+          "start": 546,
+          "end": 644
+        }
+      ]
+    },
+    "bp": {
+      "value": "123/79",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "%. Тоны сердца ритмичные, пульс 78 в минуту, АД 123/79 мм рт. ст. Живот при пальпации мягкий, безбо",
+          "start": 693,
+          "end": 792
+        }
+      ]
+    },
+    "bpm": {
+      "value": 78,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "3 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 78 в минуту, АД 123/79 мм рт. ст. Живот при пал",
+          "start": 674,
+          "end": 772
+        }
+      ]
+    },
+    "height": {
+      "value": 153,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "м осмотре состояние средней степени тяжести. Рост 153 см, масса тела 102 кг, ИМТ 43.6 кг/м². Кожны",
+          "start": 514,
+          "end": 612
+        }
+      ]
+    },
+    "rr": {
+      "value": 23,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "стые, обычной окраски. Дыхание везикулярное. ЧДД 23 в минуту, SpO2 97%. Тоны сердца ритмичные, п",
+          "start": 624,
+          "end": 720
+        }
+      ]
+    },
+    "smoking": {
+      "value": {
+        "code": 0,
+        "text": "Бросил курить"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "оездки. Повышение АД отмечает несколько лет. Бросил курить. Лекарственная аллергия со слов пациента не",
+          "start": 1298,
+          "end": 1400
+        }
+      ]
+    },
+    "spo2": {
+      "value": 97,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "аски. Дыхание везикулярное. ЧДД 23 в минуту, SpO2 97%. Тоны сердца ритмичные, пульс 78 в минуту,",
+          "start": 641,
+          "end": 737
+        }
+      ]
+    },
+    "weight": {
+      "value": 102,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тояние средней степени тяжести. Рост 153 см, масса тела 102 кг, ИМТ 43.6 кг/м². Кожные покровы чистые, о",
+          "start": 527,
+          "end": 631
+        }
+      ]
+    },
+    "ecg_avb": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ecg_bpm": {
+      "value": 107,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 23.03.2022: синусовый ритм, ЧСС 107 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1515,
+          "end": 1608
+        }
+      ]
+    },
+    "ecg_elevation": {
+      "value": "Элевация ST в отведениях I, aVL, V5–V6",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 23.03.2022: синусовый ритм, ЧСС 107 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1515,
+          "end": 1608
+        }
+      ]
+    },
+    "ecg_rythm": {
+      "value": {
+        "code": 1,
+        "text": "Синусовый"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭКГ от 23.03.2022: синусовый ритм, ЧСС 107 уд/мин. Элевация ST в отведениях I, aVL, V5–V6. На",
+          "start": 1515,
+          "end": 1608
+        }
+      ]
+    },
+    "echo_ef": {
+      "value": 46,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 43 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 46%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2724,
+          "end": 2887
+        }
+      ]
+    },
+    "echo_lvd": {
+      "value": 50,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 43 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 46%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2724,
+          "end": 2887
+        }
+      ]
+    },
+    "echo_lvd_2": {
+      "value": "не указано",
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "echo_mr": {
+      "value": {
+        "code": 1,
+        "text": "Митральная регургитация 1 ст."
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 43 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 46%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2724,
+          "end": 2887
+        }
+      ]
+    },
+    "echo_zone": {
+      "value": {
+        "code": 1,
+        "text": "Гипокинез боковой стенки ЛЖ"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ЭхоКГ. По данным ЭхоКГ: ЛП 43 мм, КДР ЛЖ 50 мм, ФВ ЛЖ 46%. Гипокинез боковой стенки ЛЖ. Митральная регургитация 1 ст. Жидкость в полости перикарда не определяется.",
+          "start": 2724,
+          "end": 2887
+        }
+      ]
+    },
+    "rg_date": {
+      "value": "23/03/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки. Рентгенография грудной клетки 23.03.2022. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Данных за венозный застой в лёгких не получено.",
+          "start": 2514,
+          "end": 2722
+        }
+      ]
+    },
+    "rg_pc": {
+      "value": {
+        "code": 0,
+        "text": "не указано"
+      },
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Рентгенография грудной клетки. Рентгенография грудной клетки 23.03.2022. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Данных за венозный застой в лёгких не получено.",
+          "start": 2514,
+          "end": 2722
+        }
+      ]
+    },
+    "ca_date": {
+      "value": "25/03/2022",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "25.03.2022",
+          "start": 2894,
+          "end": 2904
+        }
+      ]
+    },
+    "ca_fact": {
+      "value": "Y",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "КАГ. 25.03.2022 выполнена селективная КАГ. Ствол ЛКА без критического поражения. ПМЖВ: гемодинамически значимого стеноза нет",
+          "start": 2889,
+          "end": 3013
+        }
+      ]
+    },
+    "ca_lad": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "rca": {
+      "value": 2,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "card_trop": {
+      "value": "положительный",
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "первый тропониновый тест — положительный",
+          "start": 1976,
+          "end": 2016
+        }
+      ]
+    },
+    "crea": {
+      "value": 80,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "креатинин 80 мкмоль/л",
+          "start": 1933,
+          "end": 1954
+        }
+      ]
+    },
+    "glu": {
+      "value": 9.5,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "Анализы крови. При поступлении (23.03.2022) получены результаты: глюкоза 9.5 ммоль/л",
+          "start": 1802,
+          "end": 1886
+        }
+      ]
+    },
+    "hb": {
+      "value": 147,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "гемоглобин 147 г/л",
+          "start": 1956,
+          "end": 1974
+        }
+      ]
+    },
+    "ldl": {
+      "value": 4.8,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "ХС-ЛПНП 4,8 ммоль/л.",
+          "start": 2048,
+          "end": 2068
+        }
+      ]
+    },
+    "leucocytes": {
+      "value": 7.9,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "лейкоциты 7.9 ×10⁹/л",
+          "start": 1888,
+          "end": 1908
+        }
+      ]
+    },
+    "thrombocytes": {
+      "value": 337,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "тромбоциты 337 ×10⁹/л",
+          "start": 1910,
+          "end": 1931
+        }
+      ]
+    },
+    "tot_chol": {
+      "value": 6.7,
+      "source": "parser",
+      "reason": null,
+      "evidence": [
+        {
+          "text": "общий холестерин 6,7 ммоль/л",
+          "start": 2018,
+          "end": 2046
+        }
+      ]
+    },
+    "2_aag": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        },
+        {
+          "name": "Тикагрелор",
+          "prescription": "90 мг 2 раза в день"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "ace_ing_sartan": {
+      "value": [
+        {
+          "name": "Периндоприл",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "anticoagulant": {
+      "value": 0,
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "aspirin": {
+      "value": [
+        {
+          "name": "АСК",
+          "prescription": "100 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "bb": {
+      "value": [
+        {
+          "name": "Бисопролол",
+          "prescription": "5 мг утром"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    },
+    "statin": {
+      "value": [
+        {
+          "name": "Розувастатин",
+          "prescription": "20 мг вечером"
+        }
+      ],
+      "source": "llm",
+      "reason": "not_mentioned",
+      "evidence": []
+    }
+  }
+}

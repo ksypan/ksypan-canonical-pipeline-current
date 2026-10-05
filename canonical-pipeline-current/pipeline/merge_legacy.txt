@@ -1,0 +1,168 @@
+"""Merge parser values and LLM response into final 50-field JSON.
+
+This module performs a simple union:
+- Confirmed parser values are preserved.
+- LLM values fill the remaining target fields.
+- No additional inference or transformation occurs.
+
+The output contains only the official 50 fields, no metadata.
+"""
+
+from __future__ import annotations
+
+import json
+from collections.abc import Mapping
+from pathlib import Path
+from typing import Any
+
+
+TEMPLATE_PATH = Path(__file__).with_name("participant-output-template-v2.json")
+
+
+def load_template_keys(template_path: Path = TEMPLATE_PATH) -> tuple[str, ...]:
+    """Load the ordered list of 50 official field names."""
+
+    template_text = template_path.read_text(encoding="utf-8-sig")
+    template = json.loads(template_text)
+
+    if not isinstance(template, dict):
+        raise ValueError("Template must be a JSON object")
+
+    if len(template) != 50:
+        raise ValueError(f"Template must contain exactly 50 keys, got {len(template)}")
+
+    return tuple(template)
+
+
+def merge_record(
+    record: Mapping[str, Any],
+    llm_response: Mapping[str, Any],
+    target_fields: list[str],
+    template_path: Path = TEMPLATE_PATH,
+) -> dict[str, Any]:
+    """Merge parser values and LLM response.
+
+    Args:
+        record: Intermediate record with 'values' and 'meta'.
+        llm_response: LLM response containing target fields.
+        target_fields: List of field names that LLM was supposed to fill.
+        template_path: Path to the official 50-field template.
+
+    Returns:
+        Dictionary with exactly 50 fields, ready for final validation.
+
+    Raises:
+        ValueError: If record structure is invalid or LLM response is malformed.
+    """
+
+    if not isinstance(record, Mapping):
+        raise TypeError("record must be a mapping")
+
+    if "values" not in record or "meta" not in record:
+        raise ValueError("record must contain 'values' and 'meta'")
+
+    values = record["values"]
+    meta = record["meta"]
+
+    if not isinstance(values, Mapping):
+        raise TypeError("record.values must be a mapping")
+
+    if not isinstance(meta, Mapping):
+        raise TypeError("record.meta must be a mapping")
+
+    if set(values.keys()) != set(meta.keys()):
+        raise ValueError("record.values and record.meta must have identical keys")
+
+    if not isinstance(llm_response, Mapping):
+        raise TypeError("llm_response must be a mapping")
+
+    template_keys = load_template_keys(template_path)
+
+    # Check that LLM response contains exactly the target fields
+    llm_fields = set(llm_response.keys())
+    target_set = set(target_fields)
+
+    extra_fields = llm_fields - target_set
+    missing_fields = target_set - llm_fields
+
+    if extra_fields:
+        raise ValueError(
+            f"LLM response contains extra fields not in target_fields: "
+            f"{sorted(extra_fields)}"
+        )
+
+    if missing_fields:
+        raise ValueError(
+            f"LLM response is missing required target fields: "
+            f"{sorted(missing_fields)}"
+        )
+
+    # Build final result: start with parser values, overlay LLM values
+    final = dict(values)
+
+    for name, value in llm_response.items():
+        final[name] = value
+
+    # Verify we have exactly 50 keys
+    actual_keys = set(final.keys())
+    expected_keys = set(template_keys)
+
+    missing = expected_keys - actual_keys
+    extra = actual_keys - expected_keys
+
+    if missing:
+        raise ValueError(f"Final result missing fields: {sorted(missing)}")
+
+    if extra:
+        raise ValueError(f"Final result has extra fields: {sorted(extra)}")
+
+    # Return only the 50 official fields in template order
+    return {key: final[key] for key in template_keys}
+
+
+def merge_from_files(
+    intermediate_path: Path,
+    llm_response_path: Path,
+    output_path: Path,
+    target_fields: list[str],
+    template_path: Path = TEMPLATE_PATH,
+) -> None:
+    """Load intermediate record and LLM response from files, merge, and save."""
+
+    intermediate_text = intermediate_path.read_text(encoding="utf-8-sig")
+    llm_response_text = llm_response_path.read_text(encoding="utf-8-sig")
+
+    record = json.loads(intermediate_text)
+    llm_response = json.loads(llm_response_text)
+
+    final = merge_record(record, llm_response, target_fields, template_path)
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(
+        json.dumps(final, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
+if __name__ == "__main__":
+    import argparse
+
+    cli = argparse.ArgumentParser(description=__doc__)
+    cli.add_argument("--intermediate", type=Path, required=True)
+    cli.add_argument("--llm-response", type=Path, required=True)
+    cli.add_argument("--output", type=Path, required=True)
+    cli.add_argument("--target-fields", type=str, required=True, help="Comma-separated list of target fields")
+    cli.add_argument("--template", type=Path, default=TEMPLATE_PATH)
+    args = cli.parse_args()
+
+    target_fields = [f.strip() for f in args.target_fields.split(",")]
+
+    merge_from_files(
+        args.intermediate,
+        args.llm_response,
+        args.output,
+        target_fields,
+        args.template,
+    )
+
+    print(f"Merged {args.intermediate.name} + {args.llm_response.name} → {args.output.name}")

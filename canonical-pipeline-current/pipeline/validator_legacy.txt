@@ -1,0 +1,331 @@
+"""Validate final 50-field JSON against the official template.
+
+Checks performed:
+1. Exactly 50 keys, matching the template.
+2. Correct types for each field (int, str, list, object, or "не указано").
+3. Date fields match DD/MM/YYYY format.
+4. Binary code fields have {code: 0/1, text: string}.
+5. ca_lad and rca are "не указано" if ca_fact != "Y".
+6. Medication fields are 0 or list of {name, prescription} objects.
+7. No None values allowed.
+
+This validator is strict: any deviation from the template raises ValueError.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+from collections.abc import Mapping
+from pathlib import Path
+from typing import Any
+
+
+TEMPLATE_PATH = Path(__file__).with_name("participant-output-template-v2.json")
+
+DATE_PATTERN = re.compile(r"^\d{2}/\d{2}/\d{4}$")
+
+# Binary code fields: must be {code: 0/1, text: string}
+BINARY_CODE_FIELDS = {
+    "art_hyper", "atr_fibril", "ckd", "copd", "dm", "hf",
+    "tlt", "type_acs", "mi_localisation",
+    "smoking", "ecg_avb", "ecg_rythm", "echo_mr", "echo_zone", "rg_pc",
+}
+
+# Fields that must be dates
+DATE_FIELDS = {
+    "admission_date",
+    "discharge_date",
+    "rg_date",
+    "ca_date",
+}
+
+# Fields that must be numbers (int or float)
+NUMBER_FIELDS = {
+    "bmi", "height", "weight", "bpm", "rr", "spo2",
+    "ecg_bpm", "echo_ef", "echo_lvd",
+    "crea", "glu", "hb", "ldl", "leucocytes",
+    "thrombocytes", "tot_chol",
+}
+
+# Fields that must be strings (excluding "не указано")
+STRING_FIELDS = {
+    "diagnosis_icd", "bp", "ecg_elevation", "echo_lvd_2",
+}
+
+# Medication fields: must be 0 or list of {name, prescription}
+MEDICATION_FIELDS = {
+    "2_aag", "ace_ing_sartan", "anticoagulant",
+    "aspirin", "bb", "statin",
+}
+
+# ca_lad and rca: must be 0, 1, 2 or "не указано"
+STENOSIS_FIELDS = {"ca_lad", "rca"}
+
+
+def validate_binary_code(field_name: str, value: Any) -> None:
+    """Validate binary code field {code: 0/1, text: string}."""
+    if not isinstance(value, dict):
+        raise ValueError(
+            f"Field {field_name} must be an object {{code, text}}, got {type(value)}"
+        )
+    if "code" not in value or "text" not in value:
+        raise ValueError(
+            f"Field {field_name} must have 'code' and 'text' keys"
+        )
+    code = value["code"]
+    text = value["text"]
+    if code not in [0, 1]:
+        raise ValueError(
+            f"Field {field_name}.code must be 0 or 1, got {code!r}"
+        )
+    if not isinstance(text, str) or not text:
+        raise ValueError(
+            f"Field {field_name}.text must be a non-empty string, got {text!r}"
+        )
+
+
+def validate_type(
+    field_name: str,
+    value: Any,
+    template_value: Any,
+) -> None:
+    """Validate that value has the expected type."""
+
+    # Special case: "не указано" is allowed for any field
+    if value == "не указано":
+        return
+
+    # Binary code fields
+    if field_name in BINARY_CODE_FIELDS:
+        validate_binary_code(field_name, value)
+        return
+
+    # Medication fields: 0 or list
+    if field_name in MEDICATION_FIELDS:
+        if value == 0:
+            return
+        if isinstance(value, list):
+            for i, item in enumerate(value):
+                if not isinstance(item, dict):
+                    raise ValueError(
+                        f"Field {field_name}[{i}] must be an object, got {type(item)}"
+                    )
+                if "name" not in item or "prescription" not in item:
+                    raise ValueError(
+                        f"Field {field_name}[{i}] must have 'name' and 'prescription' keys"
+                    )
+                if not isinstance(item["name"], str) or not item["name"]:
+                    raise ValueError(
+                        f"Field {field_name}[{i}].name must be a non-empty string"
+                    )
+                if not isinstance(item["prescription"], str) or not item["prescription"]:
+                    raise ValueError(
+                        f"Field {field_name}[{i}].prescription must be a non-empty string"
+                    )
+            return
+        raise ValueError(
+            f"Field {field_name} must be 0 or list, got {type(value)}"
+        )
+
+    # Date fields
+    if field_name in DATE_FIELDS:
+        if not isinstance(value, str):
+            raise ValueError(
+                f"Field {field_name} must be a string, got {type(value)}"
+            )
+        if not DATE_PATTERN.match(value):
+            raise ValueError(
+                f"Field {field_name} must match DD/MM/YYYY format, got {value!r}"
+            )
+        return
+
+    # Number fields
+    if field_name in NUMBER_FIELDS:
+        if not isinstance(value, (int, float)):
+            raise ValueError(
+                f"Field {field_name} must be a number, got {type(value)}: {value!r}"
+            )
+        return
+
+    # Stenosis fields (ca_lad, rca): 0, 1, 2 or "не указано"
+    if field_name in STENOSIS_FIELDS:
+        if value not in [0, 1, 2, "не указано"]:
+            raise ValueError(
+                f"Field {field_name} must be 0, 1, 2 or 'не указано', got {value!r}"
+            )
+        return
+
+    # String fields (bp, diagnosis_icd, ecg_elevation, echo_lvd_2)
+    if field_name in STRING_FIELDS:
+        if not isinstance(value, str):
+            raise ValueError(
+                f"Field {field_name} must be a string, got {type(value)}"
+            )
+        return
+
+    # ca_fact: "Y", "R", "N"
+    if field_name == "ca_fact":
+        if value not in ["Y", "R", "N"]:
+            raise ValueError(
+                f"Field {field_name} must be 'Y', 'R' or 'N', got {value!r}"
+            )
+        return
+
+    # card_trop: "положительный", "отрицательный"
+    if field_name == "card_trop":
+        if value not in ["положительный", "отрицательный"]:
+            raise ValueError(
+                f"Field {field_name} must be 'положительный' or 'отрицательный', got {value!r}"
+            )
+        return
+
+    # killip: 1, 2, 3, 4 or "не указано"
+    if field_name == "killip":
+        if value not in [1, 2, 3, 4, "не указано"]:
+            raise ValueError(
+                f"Field {field_name} must be 1, 2, 3, 4 or 'не указано', got {value!r}"
+            )
+        return
+
+    # Default: check against template type
+    template_type = type(template_value)
+    if template_type is int:
+        if not isinstance(value, int):
+            raise ValueError(
+                f"Field {field_name} must be int, got {type(value)}: {value!r}"
+            )
+    elif template_type is str:
+        if not isinstance(value, str):
+            raise ValueError(
+                f"Field {field_name} must be str, got {type(value)}: {value!r}"
+            )
+    else:
+        raise ValueError(
+            f"Unexpected template type for {field_name}: {template_type}"
+        )
+
+
+def validate_dependencies(values: Mapping[str, Any]) -> None:
+    """Validate cross-field dependencies."""
+
+    # ca_lad and rca are only valid if ca_fact == "Y"
+    ca_fact = values.get("ca_fact")
+
+    if ca_fact != "Y":
+        if values.get("ca_lad") != "не указано":
+            raise ValueError(
+                f"ca_lad must be 'не указано' when ca_fact is {ca_fact!r}, "
+                f"got {values.get('ca_lad')!r}"
+            )
+        if values.get("rca") != "не указано":
+            raise ValueError(
+                f"rca must be 'не указано' when ca_fact is {ca_fact!r}, "
+                f"got {values.get('rca')!r}"
+            )
+
+
+def validate_no_none(values: Mapping[str, Any]) -> None:
+    """Ensure no field contains None."""
+
+    for field_name, value in values.items():
+        if value is None:
+            raise ValueError(
+                f"Field {field_name} contains None value. "
+                f"All fields must have a value or 'не указано'."
+            )
+
+
+def validate_final_json(
+    values: Mapping[str, Any],
+    template_path: Path = TEMPLATE_PATH,
+) -> bool:
+    """Validate final JSON against the official template.
+
+    Args:
+        values: Dictionary with exactly 50 fields.
+        template_path: Path to the official template.
+
+    Returns:
+        True if validation passes.
+
+    Raises:
+        ValueError: If validation fails.
+    """
+
+    if not isinstance(values, Mapping):
+        raise TypeError("values must be a mapping")
+
+    # Load template
+    template_text = template_path.read_text(encoding="utf-8-sig")
+    template = json.loads(template_text)
+
+    if not isinstance(template, dict) or len(template) != 50:
+        raise ValueError("Template must be a 50-field JSON object")
+
+    template_keys = set(template.keys())
+    actual_keys = set(values.keys())
+
+    # Check for missing/extra fields
+    missing = template_keys - actual_keys
+    extra = actual_keys - template_keys
+
+    if missing:
+        raise ValueError(f"Missing required fields: {sorted(missing)}")
+
+    if extra:
+        raise ValueError(f"Unexpected extra fields: {sorted(extra)}")
+
+    # Check for None values
+    validate_no_none(values)
+
+    # Check types for each field
+    for field_name, value in values.items():
+        template_value = template[field_name]
+        validate_type(field_name, value, template_value)
+
+    # Check dependencies
+    validate_dependencies(values)
+
+    return True
+
+
+def validate_file(
+    json_path: Path,
+    template_path: Path = TEMPLATE_PATH,
+) -> bool:
+    """Validate a JSON file against the official template."""
+
+    json_text = json_path.read_text(encoding="utf-8-sig")
+    values = json.loads(json_text)
+
+    return validate_final_json(values, template_path)
+
+
+if __name__ == "__main__":
+    import argparse
+    import sys
+
+    cli = argparse.ArgumentParser(description=__doc__)
+    cli.add_argument("json_files", type=Path, nargs="+")
+    cli.add_argument("--template", type=Path, default=TEMPLATE_PATH)
+    args = cli.parse_args()
+
+    errors = []
+
+    for json_file in args.json_files:
+        try:
+            validate_file(json_file, args.template)
+            print(f"✓ {json_file.name}: valid")
+        except Exception as e:
+            errors.append((json_file, e))
+            print(f"✗ {json_file.name}: {e}")
+
+    if errors:
+        print(f"\n{len(errors)} file(s) failed validation:")
+        for json_file, error in errors:
+            print(f"  - {json_file.name}: {error}")
+        sys.exit(1)
+
+    print(f"\nAll {len(args.json_files)} file(s) passed validation.")
+    sys.exit(0)

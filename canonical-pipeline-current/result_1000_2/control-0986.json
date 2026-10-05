@@ -1,0 +1,122 @@
+{
+  "admission_date": "13/07/2021",
+  "discharge_date": "22/07/2021",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 1,
+    "text": "Фибрилляция предсердий, постоянная форма"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "I20.0",
+  "dm": {
+    "code": 1,
+    "text": "Сахарный диабет 2 типа."
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "ИБС. Нестабильная стенокардия."
+  },
+  "bmi": 21,
+  "bp": "131/66",
+  "bpm": 80,
+  "height": 185,
+  "rr": 16,
+  "smoking": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "spo2": 98,
+  "weight": 72,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 84,
+  "ecg_elevation": "Элевации ST нет",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Фибрилляция предсердий"
+  },
+  "echo_ef": 52,
+  "echo_lvd": 48,
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 1,
+    "text": "Митральная регургитация 1 ст."
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "15/07/2021",
+  "rg_pc": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ca_date": "не указано",
+  "ca_fact": "N",
+  "ca_lad": "не указано",
+  "rca": "не указано",
+  "card_trop": "отрицательный",
+  "crea": 75,
+  "glu": 10,
+  "hb": 159,
+  "ldl": 4.2,
+  "leucocytes": 5.8,
+  "thrombocytes": 206,
+  "tot_chol": 6.2,
+  "2_aag": [
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Лозартан",
+      "prescription": "50 мг утром"
+    }
+  ],
+  "anticoagulant": [
+    {
+      "name": "Апиксабан",
+      "prescription": "5 мг 2 раза в день"
+    }
+  ],
+  "aspirin": 0,
+  "bb": [
+    {
+      "name": "Бисопролол",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Розувастатин",
+      "prescription": "20 мг вечером"
+    }
+  ]
+}

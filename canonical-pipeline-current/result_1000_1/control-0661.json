@@ -1,0 +1,126 @@
+{
+  "admission_date": "26/12/2021",
+  "discharge_date": "01/01/2022",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 1,
+    "text": "ХБП 3А"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "не указано",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": "не указано",
+  "mi_localisation": {
+    "code": 1,
+    "text": "нижней стенки"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "Острый инфаркт миокарда нижней стенки, с элевацией ST."
+  },
+  "bmi": 20.4,
+  "bp": "130/94",
+  "bpm": 98,
+  "height": 177,
+  "rr": 24,
+  "smoking": {
+    "code": 0,
+    "text": "Бросил курить"
+  },
+  "spo2": 90,
+  "weight": 64,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": "не указано",
+  "ecg_elevation": "Элевация ST в отведениях II, III, aVF",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "синусовый ритм"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 1,
+    "text": "Гипокинез нижней стенки ЛЖ"
+  },
+  "rg_date": "28/12/2021",
+  "rg_pc": {
+    "code": 1,
+    "text": "Рентгенография грудной клетки 28.12.2021. Очаговых и инфильтративных изменений не обнаружено. Синусы свободны. Заключение: Признаки интерстициального отёка лёгких."
+  },
+  "ca_date": "не указано",
+  "ca_fact": "Y",
+  "ca_lad": 2,
+  "rca": 2,
+  "card_trop": "положительный",
+  "crea": 159,
+  "glu": 6.6,
+  "hb": 137,
+  "ldl": 2.6,
+  "leucocytes": 7,
+  "thrombocytes": 269,
+  "tot_chol": 6.1,
+  "2_aag": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    },
+    {
+      "name": "Клопидогрел",
+      "prescription": "75 мг 1 раз в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Рамиприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Бисопролол",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Аторвастатин",
+      "prescription": "80 мг вечером"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "admission_date": "19/01/2022",
+  "discharge_date": "01/02/2022",
+  "art_hyper": {
+    "code": 1,
+    "text": "ГБ II ст."
+  },
+  "atr_fibril": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ckd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "copd": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "diagnosis_icd": "I21.2",
+  "dm": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "hf": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "killip": 2,
+  "mi_localisation": {
+    "code": 1,
+    "text": "боковой стенки"
+  },
+  "tlt": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "type_acs": {
+    "code": 1,
+    "text": "Острый инфаркт миокарда боковой стенки, с элевацией ST."
+  },
+  "bmi": 30.4,
+  "bp": "151/105",
+  "bpm": 83,
+  "height": 173,
+  "rr": 22,
+  "smoking": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "spo2": 94,
+  "weight": 91,
+  "ecg_avb": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "ecg_bpm": 69,
+  "ecg_elevation": "Элевация ST в отведениях I, aVL, V5–V6",
+  "ecg_rythm": {
+    "code": 1,
+    "text": "Синусовый"
+  },
+  "echo_ef": "не указано",
+  "echo_lvd": "не указано",
+  "echo_lvd_2": "не указано",
+  "echo_mr": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "echo_zone": {
+    "code": 0,
+    "text": "не указано"
+  },
+  "rg_date": "19/01/2022",
+  "rg_pc": {
+    "code": 1,
+    "text": "Рентгенография грудной клетки 19.01.2022. Лёгочные поля расправлены, новых очаговых теней нет. Плевральные синусы прослеживаются. Заключение: Признаки венозного застоя в лёгких."
+  },
+  "ca_date": "не указано",
+  "ca_fact": "Y",
+  "ca_lad": 1,
+  "rca": 2,
+  "card_trop": "положительный",
+  "crea": 94,
+  "glu": 5.9,
+  "hb": 124,
+  "ldl": 3.7,
+  "leucocytes": 11.5,
+  "thrombocytes": 241,
+  "tot_chol": 5.5,
+  "2_aag": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    },
+    {
+      "name": "Тикагрелор",
+      "prescription": "90 мг 2 раза в день"
+    }
+  ],
+  "ace_ing_sartan": [
+    {
+      "name": "Периндоприл",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "anticoagulant": 0,
+  "aspirin": [
+    {
+      "name": "АСК",
+      "prescription": "100 мг вечером"
+    }
+  ],
+  "bb": [
+    {
+      "name": "Бисопролол",
+      "prescription": "5 мг утром"
+    }
+  ],
+  "statin": [
+    {
+      "name": "Аторвастатин",
+      "prescription": "80 мг вечером"
+    }
+  ]
+}

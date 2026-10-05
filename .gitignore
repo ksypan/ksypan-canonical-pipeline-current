@@ -7,3 +7,20 @@ env/
 .idea/
 .DS_Store
 .env
+
+.venv-mac/
+*.zip
+
+# secrets
+.env
+**/.env
+
+# venv
+.venv-mac/
+**/.venv-mac/
+
+# logs
+*.log
+
+# macOS
+**/.DS_Store
