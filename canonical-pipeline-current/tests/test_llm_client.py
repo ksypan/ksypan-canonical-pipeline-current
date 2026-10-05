@@ -19,7 +19,7 @@ REQUEST = {"llm_required": True, "target_fields": ["bmi"], "system_prompt": "s",
 
 def response(text, status=200):
     result = Mock(status_code=status, text="safe")
-    result.json.return_value = {"result": {"alternatives": [{"message": {"text": text}}]}}
+    result.json.return_value = {"result__test": {"alternatives": [{"message": {"text": text}}]}}
     return result
 
 

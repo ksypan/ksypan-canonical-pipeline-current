@@ -31,14 +31,14 @@ def verify_evidence_text(text: str, evidence_text: str) -> dict[str, Any] | None
 
 
 def validate_llm_evidence(text: str, response: Mapping[str, Any]) -> dict[str, list[dict[str, Any]]]:
-    """Validate the optional future LLM evidence protocol.
+    """Validate the optional future LLM evidence__test protocol.
 
-    Supported protocol: ``{"field": "hf", "value": ..., "evidence": "..."}``
+    Supported protocol: ``{"field": "hf", "value": ..., "evidence__test": "..."}``
     records, supplied either as a list or as a field->record mapping. Invalid
     or invented quotes are deliberately omitted, never repaired or searched
     approximately.
     """
-    raw = response.get("evidence", []) if isinstance(response, Mapping) else []
+    raw = response.get("evidence__test", []) if isinstance(response, Mapping) else []
     records: list[Mapping[str, Any]] = []
     if isinstance(raw, Mapping):
         records = [dict(value, field=field) for field, value in raw.items() if isinstance(value, Mapping)]
@@ -47,7 +47,7 @@ def validate_llm_evidence(text: str, response: Mapping[str, Any]) -> dict[str, l
     validated: dict[str, list[dict[str, Any]]] = {}
     for item in records:
         field = item.get("field")
-        fragment = item.get("evidence")
+        fragment = item.get("evidence__test")
         span = verify_evidence_text(text, fragment)
         if isinstance(field, str) and span is not None:
             validated.setdefault(field, []).append(span)
@@ -77,7 +77,7 @@ def build_evidence(
     llm_evidence: Mapping[str, Any] | None = None,
     llm_fields: Sequence[str] = (),
 ) -> dict[str, Any]:
-    """Build a machine-readable evidence object without touching ``result``."""
+    """Build a machine-readable evidence__test object without touching ``result__test``."""
     values = record.get("values", {})
     meta = record.get("meta", {})
     if not isinstance(values, Mapping) or not isinstance(meta, Mapping):
@@ -103,7 +103,7 @@ def build_evidence(
             "value": deepcopy(value),
             "source": source,
             "reason": reason,
-            "evidence": spans,
+            "evidence__test": spans,
         }
     return {"document": document, "fields": fields}
 

@@ -46,7 +46,7 @@ GLOBAL_RULES = {
     "section_scope": _rule("section_scope", "Не расширять поиск показателя, привязанного к разделу, на весь документ при отсутствии этого раздела.", whole_document_fallback=False),
     "negation_and_conflict": _rule("negation_and_conflict", "Учитывать отрицания, предположения и конфликтующие значения; неоднозначность оставлять нерешённой.", ambiguous_values_policy="unresolved"),
     "intermediate_unknown": _rule("intermediate_unknown", "На этапе извлечения неизвестное сохранять как None с needs_llm; финальные defaults пока не применять, независимо от extractor.", stage="extraction", value=None, status="needs_llm", source=None, evidence=None, apply_final_defaults=False),
-    "parser_evidence": _rule("parser_evidence", "Для подтверждённого парсером значения сохранять небольшой исходный фрагмент evidence.", status="confirmed", source="parser", evidence_required=True, evidence_kind="verbatim_source_fragment"),
+    "parser_evidence": _rule("parser_evidence", "Для подтверждённого парсером значения сохранять небольшой исходный фрагмент evidence__test.", status="confirmed", source="parser", evidence_required=True, evidence_kind="verbatim_source_fragment"),
     "deidentification": _rule(
         "deidentification",
         "До передачи текста модели удаляются ФИО пациента, дата рождения, возраст, "
@@ -370,7 +370,7 @@ FIELD_CONTRACT = {
     ], section="xray"),
     "rg_pc": _binary_code("rg_pc", "parser_or_llm", "Лёгочный / венозный застой или отёк лёгких по рентгенографии ОГК.", [
         _rule("explicit_congestion", "Подтверждать code=1 только при явном описании застоя/отёка, code=0 — при явном отрицании или отсутствии упоминания.", explicit_presence_value=1, explicit_absence_value=0),
-        _rule("no_congestion_from_silence", "Неупоминание или неоднозначная формулировка не подтверждает code=1; финальный default code=0 сохраняется отдельно от evidence."),
+        _rule("no_congestion_from_silence", "Неупоминание или неоднозначная формулировка не подтверждает code=1; финальный default code=0 сохраняется отдельно от evidence__test."),
     ], section="xray", allowed_texts=[
         "Признаки венозного застоя в лёгких",
         "Умеренный венозный застой в малом круге кровообращения",

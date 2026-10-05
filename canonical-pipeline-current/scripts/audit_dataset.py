@@ -384,7 +384,7 @@ def validate_evidence(
 
     evidence_file = (
         evidence_dir
-        / f"{result_file.stem}.evidence.json"
+        / f"{result_file.stem}.evidence__test.json"
     )
 
     text_file = (
@@ -416,7 +416,7 @@ def validate_evidence(
             "WARN",
             "missing_evidence_text",
             "",
-            f"Нет evidence/text/{text_file.name}.",
+            f"Нет evidence__test/text/{text_file.name}.",
         )
 
         return
@@ -517,7 +517,7 @@ def validate_evidence(
                 "span_text_mismatch",
                 span,
                 f"{span_path}: text не совпадает "
-                f"с evidence/text по start/end.",
+                f"с evidence__test/text по start/end.",
             )
 
 
@@ -812,19 +812,19 @@ def validate_record(
 def main() -> int:
 
     parser = argparse.ArgumentParser(
-        description="Fast audit of result JSON + evidence."
+        description="Fast audit of result__test JSON + evidence__test."
     )
 
     parser.add_argument(
-        "--result-dir",
+        "--result__test-dir",
         type=Path,
-        default=Path("result"),
+        default=Path("result__test"),
     )
 
     parser.add_argument(
-        "--evidence-dir",
+        "--evidence__test-dir",
         type=Path,
-        default=Path("evidence"),
+        default=Path("evidence__test"),
     )
 
     parser.add_argument(

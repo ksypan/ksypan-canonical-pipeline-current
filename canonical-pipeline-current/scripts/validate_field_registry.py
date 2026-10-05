@@ -99,7 +99,7 @@ def validate_registry(registry_path: Path, template_path: Path) -> tuple[list[st
 
     actual_template_fields = sum(
         1 for section in template.values() if isinstance(section, dict) for key in section
-        if key not in {"value", "evidence", "confidence", "source"}
+        if key not in {"value", "evidence__test", "confidence", "source"}
     ) if isinstance(template, dict) else None
     if actual_template_fields is None:
         warnings.append("Cannot determine domain field count from template")
@@ -121,7 +121,7 @@ def main() -> int:
         template = json.loads(args.template.read_text(encoding="utf-8"))
         template_count = sum(
             1 for section in template.values() if isinstance(section, dict) for key in section
-            if key not in {"value", "evidence", "confidence", "source"}
+            if key not in {"value", "evidence__test", "confidence", "source"}
         ) if isinstance(template, dict) else None
     except (OSError, json.JSONDecodeError):
         template_count = None

@@ -51,7 +51,7 @@ BINARY_CODE_FIELDS = frozenset(
 
 
 class EvidenceText(str):
-    """A verbatim evidence string carrying the span it came from."""
+    """A verbatim evidence__test string carrying the span it came from."""
 
     def __new__(cls, value: str, start: int, end: int):
         instance = super().__new__(cls, value)
@@ -118,7 +118,7 @@ def create_empty_template(template_path=TEMPLATE_PATH):
     keys = load_field_keys(template_path)
     return {
         "values": dict.fromkeys(keys),
-        "meta": {key: {"status": "needs_llm", "source": None, "evidence": None, "evidence_spans": []}
+        "meta": {key: {"status": "needs_llm", "source": None, "evidence__test": None, "evidence_spans": []}
                  for key in keys},
     }
 
@@ -188,7 +188,7 @@ def normalize_date(value):
 
 
 def evidence(text, match):
-    """Short verbatim source span. Never reconstruct evidence from a value."""
+    """Short verbatim source span. Never reconstruct evidence__test from a value."""
     left = max(text.rfind("\n", 0, match.start()), text.rfind(";", 0, match.start())) + 1
     right_candidates = [p for p in (text.find("\n", match.end()), text.find(";", match.end())) if p >= 0]
     right = min(right_candidates) if right_candidates else len(text)
@@ -218,11 +218,11 @@ def confirm(result, key, value, source_evidence):
             "end": getattr(source_evidence, "end", None),
         }
         if span["start"] is None or span["end"] is None:
-            raise ValueError(f"Parser evidence must carry offsets: {key}")
+            raise ValueError(f"Parser evidence__test must carry offsets: {key}")
         result["meta"][key] = {
             "status": "confirmed",
             "source": "parser",
-            "evidence": str(source_evidence),
+            "evidence__test": str(source_evidence),
             "evidence_spans": [span],
         }
 
@@ -303,7 +303,7 @@ def extract_diagnosis(result, text):
     for key, pattern in diagnoses.items():
         matches = list(re.finditer(pattern, text, FLAGS))
         if matches and all(is_asserted(text, m) for m in matches):
-            # For binary code fields, store as {code: 1, text: evidence}
+            # For binary code fields, store as {code: 1, text: evidence__test}
             if key in BINARY_CODE_FIELDS:
                 confirm(result, key, {"code": 1, "text": evidence(text, matches[0])}, evidence(text, matches[0]))
             else:
@@ -374,7 +374,7 @@ def extract_ecg(result, text):
     for match in re.finditer(r"\b" + block + SEP + r"(III|II|I|[1-3])\s*(?:ст\.?|степени|степень)\b", text, FLAGS):
         if not is_asserted(text, match):
             return
-        # For binary code field, store as {code: 1, text: full evidence}
+        # For binary code field, store as {code: 1, text: full evidence__test}
         candidates.append(({"code": 1, "text": evidence(text, match)}, evidence(text, match)))
     negative_block = r"\b(?:нет\s+" + block + "|" + block + r"\s+(?:нет|отсутствует|не\s+выявлена))\b"
     for match in re.finditer(negative_block, text, FLAGS):

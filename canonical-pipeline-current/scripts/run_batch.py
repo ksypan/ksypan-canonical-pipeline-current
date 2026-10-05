@@ -23,9 +23,9 @@ def run_batch(input_dir: Path, output_dir: Path, evidence_dir: Path | None = Non
     for path in files:
         try:
             bundle = process_epicrisis_bundle(path.read_text(encoding="utf-8-sig"), document=path.stem, llm_call=llm_call)
-            (output_dir / f"{path.stem}.json").write_text(json.dumps(bundle["result"], ensure_ascii=False, indent=2), encoding="utf-8")
+            (output_dir / f"{path.stem}.json").write_text(json.dumps(bundle["result__test"], ensure_ascii=False, indent=2), encoding="utf-8")
             if evidence_dir is not None:
-                write_evidence(evidence_dir / f"{path.stem}.evidence.json", bundle["evidence"])
+                write_evidence(evidence_dir / f"{path.stem}.evidence__test.json", bundle["evidence__test"])
                 (evidence_dir / "text" / f"{path.stem}.md").write_text(bundle["text"], encoding="utf-8")
             success += 1
             print(f"OK   {path.name}")
@@ -41,8 +41,8 @@ def run_batch(input_dir: Path, output_dir: Path, evidence_dir: Path | None = Non
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-dir", type=Path, default=Path("input"))
-    parser.add_argument("--output-dir", type=Path, default=Path("result"))
-    parser.add_argument("--evidence-dir", type=Path, default=Path("evidence"))
+    parser.add_argument("--output-dir", type=Path, default=Path("result__test"))
+    parser.add_argument("--evidence__test-dir", type=Path, default=Path("evidence__test"))
     args = parser.parse_args()
     _, _, failed = run_batch(args.input_dir, args.output_dir, args.evidence_dir)
     return 1 if failed else 0

@@ -14,7 +14,7 @@ from .evidence import build_evidence
 
 
 def process_epicrisis(text: str, *, llm_call: Callable[[Mapping[str, Any]], Mapping[str, Any]] | None = None) -> dict[str, Any]:
-    return process_epicrisis_bundle(text, llm_call=llm_call)["result"]
+    return process_epicrisis_bundle(text, llm_call=llm_call)["result__test"]
 
 
 def process_epicrisis_bundle(
@@ -24,7 +24,7 @@ def process_epicrisis_bundle(
     llm_evidence: Mapping[str, Any] | None = None,
     document: str = "document",
 ) -> dict[str, Any]:
-    """Return the UI data model; the official result remains unchanged."""
+    """Return the UI data model; the official result__test remains unchanged."""
     if not isinstance(text, str) or not text.strip():
         raise ValueError("text must be a non-empty string")
     redacted_text, record = extract_epicrisis(text)
@@ -35,8 +35,8 @@ def process_epicrisis_bundle(
     return {
         "document": document,
         "text": redacted_text,
-        "result": result,
-        "evidence": build_evidence(
+        "result__test": result,
+        "evidence__test": build_evidence(
             document,
             redacted_text,
             result,

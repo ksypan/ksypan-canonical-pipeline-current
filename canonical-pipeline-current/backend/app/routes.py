@@ -25,8 +25,8 @@ def extract(request: EpicrisisRequest) -> EpicrisisResponse:
 def _data_dirs() -> tuple[Path, Path, Path]:
     return (
         Path(os.getenv("EPICRISIS_SOURCE_DIR", "input")),
-        Path(os.getenv("EPICRISIS_RESULT_DIR", "result")),
-        Path(os.getenv("EPICRISIS_EVIDENCE_DIR", "evidence")),
+        Path(os.getenv("EPICRISIS_RESULT_DIR", "result__test")),
+        Path(os.getenv("EPICRISIS_EVIDENCE_DIR", "evidence__test")),
     )
 
 
@@ -34,7 +34,7 @@ def _data_dirs() -> tuple[Path, Path, Path]:
 def documents() -> list[DocumentSummary]:
     _, result_dir, evidence_dir = _data_dirs()
     stems = {path.stem for path in result_dir.glob("*.json") if path.is_file()}
-    stems &= {path.name.removesuffix(".evidence") for path in evidence_dir.glob("*.evidence.json") if path.is_file()}
+    stems &= {path.name.removesuffix(".evidence__test") for path in evidence_dir.glob("*.evidence__test.json") if path.is_file()}
     return [DocumentSummary(document=stem) for stem in sorted(stems)]
 
 
@@ -44,7 +44,7 @@ def document(document_id: str) -> DocumentResponse:
         raise HTTPException(status_code=400, detail="invalid document id")
     source_dir, result_dir, evidence_dir = _data_dirs()
     result_path = result_dir / f"{document_id}.json"
-    evidence_path = evidence_dir / f"{document_id}.evidence.json"
+    evidence_path = evidence_dir / f"{document_id}.evidence__test.json"
     text_path = evidence_dir / "text" / f"{document_id}.md"
     if not result_path.is_file() or not evidence_path.is_file() or not text_path.is_file():
         raise HTTPException(status_code=404, detail="document not found")

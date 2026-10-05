@@ -58,7 +58,7 @@ def _response_json(response: requests.Response) -> dict[str, Any]:
         raise LLMClientError(f"YandexGPT API returned HTTP {response.status_code}")
     try:
         payload = response.json()
-        text = payload["result"]["alternatives"][0]["message"]["text"]
+        text = payload["result__test"]["alternatives"][0]["message"]["text"]
     except (KeyError, IndexError, TypeError, ValueError) as exc:
         raise LLMResponseError("YandexGPT returned an unexpected response structure") from exc
     if not isinstance(text, str) or not text.strip():

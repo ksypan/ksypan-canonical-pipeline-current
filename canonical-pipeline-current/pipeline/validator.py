@@ -1,4 +1,4 @@
-"""Final validation and normalization of the flat 50-field result."""
+"""Final validation and normalization of the flat 50-field result__test."""
 
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ def validate_final_json(values: Mapping[str, Any]) -> dict[str, Any]:
     if official_fields != tuple(FIELD_CONTRACT):
         raise ValueError("FIELD_CONTRACT and official template are out of sync")
     if not isinstance(values, Mapping) or tuple(values) != official_fields:
-        raise ValueError(f"Final result must contain exactly {len(FIELD_CONTRACT)} official fields")
+        raise ValueError(f"Final result__test must contain exactly {len(FIELD_CONTRACT)} official fields")
     normalized = dict(values)
     for name, value in normalized.items():
         field = FIELD_CONTRACT[name]

@@ -56,18 +56,18 @@ def _record_parts(record):
         if item["status"] == "confirmed" and value is None:
             raise ValueError(f"Confirmed value cannot be None: {name}")
         if item["status"] == "confirmed" and (
-            item.get("source") != "parser" or not item.get("evidence")
+            item.get("source") != "parser" or not item.get("evidence__test")
         ):
-            raise ValueError(f"Confirmed value must have parser source and evidence: {name}")
+            raise ValueError(f"Confirmed value must have parser source and evidence__test: {name}")
         if item["status"] == "needs_llm" and value is not None:
             raise ValueError(f"Unresolved value must be None: {name}")
-        if item["status"] == "needs_llm" and any(item.get(key) is not None for key in ("source", "evidence")):
-            raise ValueError(f"Unresolved value cannot have source/evidence: {name}")
+        if item["status"] == "needs_llm" and any(item.get(key) is not None for key in ("source", "evidence__test")):
+            raise ValueError(f"Unresolved value cannot have source/evidence__test: {name}")
     return values, meta
 
 
 def get_confirmed_values(record):
-    """Collect confirmed values, including valid zeroes; omit meta/evidence."""
+    """Collect confirmed values, including valid zeroes; omit meta/evidence__test."""
     values, meta = _record_parts(record)
     return deepcopy({name: value for name, value in values.items()
                      if meta[name]["status"] == "confirmed"})
@@ -172,7 +172,7 @@ def build_system_prompt(target_fields, field_contract=FIELD_CONTRACT, global_rul
     if any(field_contract[name]["value_type"] == "binary_code" for name in target_fields):
         parts.append(
             "Для бинарных полей (0/1) возвращай объект {code, text}. "
-            "Различай прямое evidence, explicit negation и missing/default: code = 0 при явном отрицании; "
+            "Различай прямое evidence__test, explicit negation и missing/default: code = 0 при явном отрицании; "
             "отсутствие упоминания не является доказанным отрицанием и получает missing_value только "
             "если это разрешено правилом конкретного target field. "
             "code = 1 при прямом указании признака; text = точная формулировка из таблицы вариантов."
@@ -180,7 +180,7 @@ def build_system_prompt(target_fields, field_contract=FIELD_CONTRACT, global_rul
     parts.extend([
         "ПРИМЕНИМЫЕ GLOBAL_RULES ИЗ КОНТРАКТА:\n" + _json(rules),
         "Верни только JSON: один объект с ровно всеми ключами target_fields. "
-        "Не возвращай confirmed parser fields, meta, evidence или дополнительные поля. "
+        "Не возвращай confirmed parser fields, meta, evidence__test или дополнительные поля. "
         "Не пиши пояснений до или после JSON, Markdown, блоков кода или комментариев.",
     ])
     return "\n\n".join(parts)
