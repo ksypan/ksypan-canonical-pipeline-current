@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МедДанные | Проверка документа</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background-color: #f4f7fb; margin: 0; display: flex; height: 100vh; color: #1e293b; }
+        .sidebar { width: 260px; background-color: #ffffff; border-right: 1px solid #e2e8f0; padding: 24px; flex-shrink: 0; box-sizing: border-box; }
+        .logo { font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 30px; display: flex; align-items: center; gap: 8px;}
+        .menu-header { font-size: 12px; color: #94a3b8; font-weight: 600; margin-bottom: 15px; margin-top: 30px; text-transform: uppercase; }
+        .menu-item { padding: 12px 16px; color: #64748b; text-decoration: none; display: block; border-radius: 8px; margin-bottom: 5px; font-weight: 500; transition: 0.2s; }
+        .menu-item:hover { background-color: #f1f5f9; }
+        .menu-item.active { background-color: #e0f2fe; color: #0284c7; }
+        .main-content { flex: 1; display: flex; flex-direction: column; padding: 24px 40px; overflow: hidden; }
+        .header { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .header-titles h1 { margin: 0 0 5px 0; font-size: 24px; }
+        .header-titles p { margin: 0; color: #64748b; font-size: 14px; }
+        .breadcrumbs { font-size: 13px; color: #94a3b8; margin-bottom: 15px; }
+        .status-badge { font-size: 12px; padding: 6px 12px; border-radius: 20px; background: #fef08a; color: #854d0e; font-weight: 600; display: inline-block; }
+        
+        .split-container { display: flex; gap: 24px; flex: 1; overflow: hidden; }
+        .panel { flex: 1; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+        .panel-header { padding: 16px 20px; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
+        .panel-header-sub { font-size: 12px; color: #64748b; font-weight: 400; }
+        .panel-content { padding: 20px; overflow-y: auto; flex: 1; font-size: 14px; line-height: 1.6; }
+        
+        .doc-text { white-space: pre-line; color: #334155; }
+        mark { background-color: #fef08a; padding: 2px 4px; border-radius: 4px; color: #1e293b; font-weight: 500; }
+        .info-notice { background-color: #f0f9ff; border: 1px solid #bae6fd; color: #0369a1; padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; display: flex; gap: 10px; align-items: center; }
+        
+        /* Аккордеоны и сетка для полей */
+        details { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; background: #ffffff; }
+        summary { padding: 16px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background-color: #f8fafc; border-radius: 8px; }
+        summary::-webkit-details-marker { display: none; }
+        summary:hover { background-color: #f1f5f9; }
+        .details-content { padding: 16px; border-top: 1px solid #e2e8f0; }
+        
+        /* Сетка в 2 колонки для формы */
+        .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        
+        .form-group { margin-bottom: 0; }
+        .form-label { display: block; font-size: 12px; color: #64748b; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .form-input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; color: #0f172a; box-sizing: border-box; background-color: #f8fafc; transition: 0.2s; }
+        .form-input:focus { outline: none; border-color: #3f51b5; background-color: #ffffff; box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1); }
+        .form-input.error { border-color: #ef4444; background-color: #fef2f2; color: #b91c1c; }
+        .form-input.error:focus { box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1); }
+        .error-message { color: #ef4444; font-size: 11px; margin-top: 5px; display: none; font-weight: 500; }
+        .form-input.error + .error-message { display: block; }
+        
+        .panel-footer { padding: 16px 20px; border-top: 1px solid #e2e8f0; background-color: #ffffff; }
+        .footer-stats { font-size: 12px; color: #ef4444; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 5px; }
+        .btn-primary { background-color: #3f51b5; color: white; border: none; border-radius: 6px; padding: 12px; font-size: 14px; font-weight: 500; width: 100%; cursor: pointer; text-align: center; transition: 0.2s; }
+        .btn-primary:hover { background-color: #303f9f; }
+        .btn-primary:disabled { background-color: #94a3b8; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">🏥 МедДанные</div>
+        <div class="menu-header">Работа с данными</div>
+        <a href="index.html" class="menu-item">📥 Загрузка файлов</a>
+        <a href="registry.html" class="menu-item">📋 Реестр документов</a>
+        <a href="verify.html" class="menu-item active">👁 Проверка документа</a>
+    </div>
+    
+    <div class="main-content">
+        <div class="breadcrumbs" id="breadcrumbNav">Загрузка...</div>
+        <div class="header">
+            <div class="header-titles">
+                <h1>Проверка медицинского документа</h1>
+                <p>Сверьте извлечённые значения с текстом и подтвердите результат.</p>
+            </div>
+            <div class="status-badge">На проверке</div>
+        </div>
+        <div class="split-container">
+            
+            <!-- Левая панель: Исходный документ -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span>📄 Исходный документ</span>
+                    <span class="panel-header-sub">Жёлтым выделены найденные данные</span>
+                </div>
+                <div class="panel-content">
+                    <div class="doc-text" id="sourceText">Ожидание текста с сервера...</div>
+                </div>
+            </div>
+            
+            <!-- Правая панель: 50 параметров из JSON -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span>📋 Извлечённые данные</span>
+                    <span class="panel-header-sub" id="fieldsCounter">0/50 полей</span>
+                </div>
+                <div class="panel-content">
+                    <div class="info-notice">💡 Отредактируйте невалидные поля (подсвечены красным).</div>
+                    
+                    <!-- 1. Даты эпизода -->
+                    <details open>
+                        <summary>1. Даты эпизода</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="admission_date">Дата поступления</label><input type="text" class="form-input extracted-field" id="admission_date"><span class="error-message">Ошибка формата</span></div>
+                            <div class="form-group"><label class="form-label" title="discharge_date">Дата выписки</label><input type="text" class="form-input extracted-field" id="discharge_date"><span class="error-message">Ошибка формата</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 2. Диагноз -->
+                    <details>
+                        <summary>2. Диагноз</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="art_hyper">Арт. гипертензия</label><input type="text" class="form-input extracted-field" id="art_hyper"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="atr_fibril">Фибрилляция предс</label><input type="text" class="form-input extracted-field" id="atr_fibril"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ckd">ХБП</label><input type="text" class="form-input extracted-field" id="ckd"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="copd">ХОБЛ</label><input type="text" class="form-input extracted-field" id="copd"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="diagnosis_icd">Код МКБ-10</label><input type="text" class="form-input extracted-field" id="diagnosis_icd"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="dm">Сахарный диабет</label><input type="text" class="form-input extracted-field" id="dm"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="hf">ХСН</label><input type="text" class="form-input extracted-field" id="hf"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="killip">Класс Killip</label><input type="text" class="form-input extracted-field" id="killip"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="mi_localisation">Локализация ИМ</label><input type="text" class="form-input extracted-field" id="mi_localisation"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="tlt">Тромболизис</label><input type="text" class="form-input extracted-field" id="tlt"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="type_acs">Тип ОКС</label><input type="text" class="form-input extracted-field" id="type_acs"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 3. Осмотр при поступлении -->
+                    <details>
+                        <summary>3. Осмотр при поступлении</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="bmi">ИМТ</label><input type="text" class="form-input extracted-field" id="bmi"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="bp">Артериальное давление</label><input type="text" class="form-input extracted-field" id="bp"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="bpm">Пульс</label><input type="text" class="form-input extracted-field" id="bpm"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="height">Рост (см)</label><input type="text" class="form-input extracted-field" id="height"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="rr">ЧДД</label><input type="text" class="form-input extracted-field" id="rr"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="smoking">Курение</label><input type="text" class="form-input extracted-field" id="smoking"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="spo2">SpO2 (%)</label><input type="text" class="form-input extracted-field" id="spo2"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="weight">Масса тела (кг)</label><input type="text" class="form-input extracted-field" id="weight"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 4. ЭКГ -->
+                    <details>
+                        <summary>4. ЭКГ</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="ecg_avb">АВ-блокада</label><input type="text" class="form-input extracted-field" id="ecg_avb"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ecg_bpm">ЧСС по ЭКГ</label><input type="text" class="form-input extracted-field" id="ecg_bpm"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ecg_elevation">Изменения ST</label><input type="text" class="form-input extracted-field" id="ecg_elevation"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ecg_rythm">Ритм по ЭКГ</label><input type="text" class="form-input extracted-field" id="ecg_rythm"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 5. ЭХО-КГ -->
+                    <details>
+                        <summary>5. ЭХО-КГ</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="echo_ef">Фракция выброса (%)</label><input type="text" class="form-input extracted-field" id="echo_ef"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="echo_lvd">КДР ЛЖ (мм)</label><input type="text" class="form-input extracted-field" id="echo_lvd"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="echo_lvd_2">КСР ЛЖ (мм)</label><input type="text" class="form-input extracted-field" id="echo_lvd_2"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="echo_mr">Митральная регургит</label><input type="text" class="form-input extracted-field" id="echo_mr"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="echo_zone">Зона гипокинеза</label><input type="text" class="form-input extracted-field" id="echo_zone"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 6. Рентген грудной клетки -->
+                    <details>
+                        <summary>6. Рентген грудной клетки</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="rg_date">Дата РГ ОГК</label><input type="text" class="form-input extracted-field" id="rg_date"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="rg_pc">Признаки застоя</label><input type="text" class="form-input extracted-field" id="rg_pc"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 7. Коронарография -->
+                    <details>
+                        <summary>7. Коронарография</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="ca_date">Дата КАГ</label><input type="text" class="form-input extracted-field" id="ca_date"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ca_fact">Факт</label><input type="text" class="form-input extracted-field" id="ca_fact"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ca_lad">Поражение ПМЖВ</label><input type="text" class="form-input extracted-field" id="ca_lad"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="rca">Поражение ПКА</label><input type="text" class="form-input extracted-field" id="rca"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 8. Лабораторные данные -->
+                    <details>
+                        <summary>8. Лабораторные данные</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="card_trop">Тропонин</label><input type="text" class="form-input extracted-field" id="card_trop"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="crea">Креатинин</label><input type="text" class="form-input extracted-field" id="crea"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="glu">Глюкоза</label><input type="text" class="form-input extracted-field" id="glu"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="hb">Гемоглобин</label><input type="text" class="form-input extracted-field" id="hb"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ldl">Холестерин ЛПНП</label><input type="text" class="form-input extracted-field" id="ldl"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="leucocytes">Лейкоциты</label><input type="text" class="form-input extracted-field" id="leucocytes"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="thrombocytes">Тромбоциты</label><input type="text" class="form-input extracted-field" id="thrombocytes"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="tot_chol">Общий холестерин</label><input type="text" class="form-input extracted-field" id="tot_chol"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+
+                    <!-- 9. Медикаментозная терапия -->
+                    <details>
+                        <summary>9. Медикаментозная терапия</summary>
+                        <div class="details-content grid-2-col">
+                            <div class="form-group"><label class="form-label" title="2_aag">Двойная антиагрегантная</label><input type="text" class="form-input extracted-field" id="2_aag"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="ace_ing_sartan">Ингибитор АПФ/сартан</label><input type="text" class="form-input extracted-field" id="ace_ing_sartan"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="anticoagulant">Антикоагулянт</label><input type="text" class="form-input extracted-field" id="anticoagulant"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="aspirin">Аспирин/АСК</label><input type="text" class="form-input extracted-field" id="aspirin"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="bb">Бета-блокатор</label><input type="text" class="form-input extracted-field" id="bb"><span class="error-message">Ошибка</span></div>
+                            <div class="form-group"><label class="form-label" title="statin">Статин</label><input type="text" class="form-input extracted-field" id="statin"><span class="error-message">Ошибка</span></div>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="panel-footer">
+                    <div class="footer-stats" id="errorCounter">⏳ Ожидание данных...</div>
+                    <button class="btn-primary" id="saveBtn" onclick="saveCorrections()">Сохранить и вернуться в реестр ➔</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // СОКОМАНДНИКИ: Эндпоинты API
+        const API_GET_DOCUMENT = "http://localhost:8000/api/document/";
+        const API_SAVE_DOCUMENT = "http://localhost:8000/api/document/save/";
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentDocId = urlParams.get('docId') || "";
+
+        document.addEventListener('DOMContentLoaded', loadDocumentData);
+
+        async function loadDocumentData() {
+            if (!currentDocId) {
+                document.getElementById('sourceText').innerHTML = '<span style="color: #ef4444;">ID документа не указан.</span>';
+                return;
+            }
+
+            try {
+                const response = await fetch(API_GET_DOCUMENT + currentDocId);
+                if (!response.ok) throw new Error("Бэкенд недоступен");
+                const data = await response.json();
+                populateUI(data);
+            } catch (e) {
+                console.error("Ошибка загрузки документа:", e);
+                document.getElementById('sourceText').innerHTML = '<span style="color: #ef4444;">Ошибка загрузки исходного текста. Проверьте соединение с backend.</span>';
+                document.getElementById('errorCounter').innerText = "Ошибка соединения с сервером.";
+            }
+        }
+
+        function populateUI(data) {
+            document.getElementById('breadcrumbNav').innerText = `Реестр документов / ${data.filename}`;
+            document.getElementById('sourceText').innerHTML = data.original_html;
+            
+            let errorsFound = 0;
+            let fieldsFilled = 0;
+            
+            if (data.extracted) {
+                Object.keys(data.extracted).forEach(key => {
+                    const inputElement = document.getElementById(key);
+                    if (inputElement) {
+                        inputElement.value = data.extracted[key].value || "";
+                        fieldsFilled++;
+                        
+                        if (data.extracted[key].error) {
+                            inputElement.classList.add('error');
+                            inputElement.closest('details').setAttribute('open', true);
+                            errorsFound++;
+                        }
+                    }
+                });
+            }
+            
+            document.getElementById('fieldsCounter').innerText = `${fieldsFilled}/50 полей`;
+            
+            const statsElement = document.getElementById('errorCounter');
+            if(errorsFound > 0) {
+                statsElement.style.color = "#ef4444";
+                statsElement.innerText = `⚠️ Найдено ошибок формата: ${errorsFound}. Исправьте значения.`;
+            } else {
+                statsElement.style.color = "#10b981";
+                statsElement.innerText = "✓ Все поля валидны.";
+            }
+        }
+
+        async function saveCorrections() {
+            const btn = document.getElementById('saveBtn');
+            btn.innerHTML = "⏳ Сохранение...";
+            btn.disabled = true;
+
+            const payload = { id: currentDocId, fields: {} };
+            document.querySelectorAll('.extracted-field').forEach(input => {
+                payload.fields[input.id] = input.value;
+            });
+
+            try {
+                const response = await fetch(API_SAVE_DOCUMENT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (!response.ok) throw new Error("Ошибка сохранения");
+                window.location.href = 'registry.html';
+            } catch(e) {
+                console.error("Ошибка сохранения данных:", e);
+                alert("Не удалось сохранить данные на сервере.");
+                btn.innerHTML = "Сохранить и вернуться в реестр ➔";
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МедДанные | Загрузка файлов</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+            background-color: #f4f7fb; 
+            margin: 0; 
+            display: flex; 
+            height: 100vh; 
+            color: #1e293b; 
+        }
+        
+        /* Боковое меню */
+        .sidebar { 
+            width: 260px; 
+            background-color: #ffffff; 
+            border-right: 1px solid #e2e8f0; 
+            padding: 24px; 
+            box-sizing: border-box; 
+            flex-shrink: 0;
+        }
+        .logo { font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 30px; display: flex; align-items: center; gap: 8px;}
+        .menu-header { font-size: 12px; color: #94a3b8; font-weight: 600; margin-bottom: 15px; margin-top: 30px; text-transform: uppercase; }
+        .menu-item { 
+            padding: 12px 16px; 
+            color: #64748b; 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center;
+            gap: 10px;
+            border-radius: 8px; 
+            margin-bottom: 5px; 
+            font-weight: 500; 
+            transition: 0.2s; 
+        }
+        .menu-item:hover { background-color: #f1f5f9; }
+        .menu-item.active { background-color: #e0f2fe; color: #0284c7; }
+        
+        /* Основная область центрирует контейнер загрузки */
+        .main-content { 
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 40px; 
+            overflow-y: auto;
+        }
+        
+        /* Контейнер загрузки */
+        .upload-container { 
+            background-color: white; 
+            width: 100%; 
+            max-width: 800px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+            padding: 40px; 
+            text-align: center; 
+        }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .header h1 { font-size: 24px; margin: 0; font-weight: 600; color: #0f172a; }
+        .step { color: #64748b; font-size: 14px; font-weight: 500; background: #f1f5f9; padding: 4px 12px; border-radius: 20px; }
+        
+        .upload-area { 
+            border: 2px dashed #cbd5e1; 
+            border-radius: 8px; 
+            padding: 60px 20px; 
+            background-color: #f8fafc; 
+            margin-bottom: 24px; 
+            transition: 0.3s; 
+        }
+        .upload-area:hover { background-color: #f1f5f9; border-color: #94a3b8; cursor: pointer; }
+        .icon-cloud { font-size: 48px; margin-bottom: 20px; }
+        .upload-text { font-size: 18px; font-weight: 500; margin-bottom: 10px; color: #1e293b; }
+        .upload-subtext { font-size: 13px; color: #64748b; }
+        
+        .btn-primary { 
+            background-color: #3f51b5; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            padding: 14px 24px; 
+            font-size: 16px; 
+            font-weight: 500; 
+            width: 100%; 
+            cursor: pointer; 
+            transition: 0.2s; 
+        }
+        .btn-primary:hover { background-color: #303f9f; }
+        .security-notice { margin-top: 16px; font-size: 13px; color: #64748b; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">🏥 МедДанные</div>
+        <div class="menu-header">Работа с данными</div>
+        <!-- Активный пункт меню перенесен на Загрузку файлов -->
+        <a href="index.html" class="menu-item active">📥 Загрузка файлов</a>
+        <a href="registry.html" class="menu-item">📋 Реестр документов</a>
+        <a href="verify.html" class="menu-item">👁 Проверка документа</a>
+    </div>
+    
+    <div class="main-content">
+        <div class="upload-container">
+            <div class="header">
+                <h1>Загрузка документов</h1>
+                <div class="step">Шаг 1 из 2</div>
+            </div>
+            <div class="upload-area">
+                <div class="icon-cloud">☁️</div>
+                <div class="upload-text">Перетащите файлы .md сюда или нажмите, чтобы выбрать</div>
+                <div class="upload-subtext">Формат .md • До 20 МБ на файл • До 10 файлов за раз</div>
+            </div>
+            <button class="btn-primary" onclick="window.location.href='registry.html'">Начать обработку ➔</button>
+            <div class="security-notice">🔒 Ваши документы доступны только в вашем закрытом контуре</div>
+        </div>
+    </div>
+</body>
+</html>

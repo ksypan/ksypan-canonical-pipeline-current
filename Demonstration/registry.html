@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МедДанные | Реестр документов</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background-color: #f4f7fb; margin: 0; display: flex; height: 100vh; color: #1e293b; }
+        .sidebar { width: 260px; background-color: #ffffff; border-right: 1px solid #e2e8f0; padding: 24px; box-sizing: border-box; }
+        .logo { font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 30px; }
+        .menu-item { padding: 12px 16px; color: #64748b; text-decoration: none; display: block; border-radius: 8px; margin-bottom: 5px; font-weight: 500; transition: 0.2s; }
+        .menu-item:hover { background-color: #f1f5f9; }
+        .menu-item.active { background-color: #e0f2fe; color: #0284c7; }
+        .main-content { flex: 1; padding: 40px; overflow-y: auto; }
+        .header { margin-bottom: 30px; }
+        .header h1 { margin: 0 0 10px 0; font-size: 28px; }
+        .header p { margin: 0; color: #64748b; }
+        .metrics-grid { display: flex; gap: 20px; margin-bottom: 30px; }
+        .metric-card { background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; flex: 1; }
+        .metric-title { font-size: 13px; color: #64748b; margin-bottom: 10px; }
+        .metric-value { font-size: 32px; font-weight: 700; color: #0f172a; transition: 0.3s; }
+        .metric-sub { font-size: 13px; color: #10b981; margin-top: 5px; transition: 0.3s; }
+        .table-container { background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+        .table-controls { padding: 20px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+        .tabs { display: flex; gap: 20px; }
+        .tab { color: #64748b; font-weight: 500; cursor: pointer; padding-bottom: 5px; }
+        .tab.active { color: #0284c7; border-bottom: 2px solid #0284c7; }
+        .actions-group { display: flex; gap: 12px; align-items: center; }
+        .btn-bulk-download { background-color: #ffffff; color: #3f51b5; border: 1px solid #3f51b5; border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 500; cursor: pointer; transition: 0.2s; display: flex; align-items: center; gap: 6px; }
+        .btn-bulk-download:hover { background-color: #eef2ff; }
+        .search-input { padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 6px; width: 220px; font-size: 13px; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background-color: #f8fafc; text-align: left; padding: 16px 20px; font-size: 13px; color: #64748b; border-bottom: 1px solid #e2e8f0; }
+        td { padding: 16px 20px; border-bottom: 1px solid #e2e8f0; font-size: 14px; vertical-align: middle; }
+        tr:hover { background-color: #f8fafc; cursor: pointer; }
+        .col-checkbox { width: 40px; text-align: center; padding-right: 0; }
+        .col-actions { width: 60px; text-align: right; }
+        input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: #3f51b5; }
+        .btn-icon { background: none; border: none; cursor: pointer; color: #64748b; font-size: 18px; padding: 4px; border-radius: 4px; transition: 0.2s; }
+        .btn-icon:hover { color: #3f51b5; background-color: #eef2ff; }
+        .btn-icon:disabled { color: #cbd5e1; cursor: not-allowed; background: none; }
+        .badge { padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; display: inline-block; }
+        .badge-success { background: #dcfce7; color: #166534; }
+        .badge-warning { background: #fef08a; color: #854d0e; }
+        .badge-processing { background: #e0f2fe; color: #0369a1; }
+        .filename { font-weight: 600; color: #0f172a; margin-bottom: 4px; }
+        .file-meta { font-size: 12px; color: #64748b; }
+        
+        /* Плавное появление успешной строки */
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; background-color: #eef2ff; } to { opacity: 1; background-color: transparent; } }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">🏥 МедДанные</div>
+        <div style="font-size: 12px; color: #94a3b8; font-weight: 600; margin-bottom: 10px; margin-top: 30px;">РАБОТА С ДАННЫМИ</div>
+        <a href="index.html" class="menu-item">📥 Загрузка файлов</a>
+        <a href="registry.html" class="menu-item active">📋 Реестр документов</a>
+        <a href="verify.html" class="menu-item">👁 Проверка документа</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Реестр документов</h1>
+            <p>Проверяйте извлечённые медицинские данные и экспортируйте результаты в JSON.</p>
+        </div>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Всего документов</div>
+                <div class="metric-value">24</div>
+                <div class="metric-sub" style="color: #64748b;">В рабочем пространстве</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Проверенные</div>
+                <div class="metric-value" id="val-ready">18</div>
+                <div class="metric-sub" style="color: #64748b;">Готовы к экспорту</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Ожидают проверки</div>
+                <div class="metric-value" id="val-pending">6</div>
+                <div class="metric-sub" id="sub-pending" style="color: #f59e0b;">4 на проверке • 2 в обработке</div>
+            </div>
+        </div>
+        <div class="table-container">
+            <div class="table-controls">
+                <div class="tabs"><div class="tab active">Все (24)</div><div class="tab">Ожидают (6)</div><div class="tab">Проверенные (18)</div></div>
+                <div class="actions-group">
+                    <button class="btn-bulk-download" onclick="alert('Формирование ZIP-архива выбранных документов...')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Скачать выбранные
+                    </button>
+                    <input type="text" class="search-input" placeholder="Поиск по имени файла...">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-checkbox"><input type="checkbox" id="selectAll" onclick="toggleSelectAll(this)" title="Выбрать все"></th>
+                        <th>Имя файла</th>
+                        <th>Статус обработки</th>
+                        <th>Валидация</th>
+                        <th class="col-actions"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Строка 1 -->
+                    <tr>
+                        <td class="col-checkbox"><input type="checkbox" class="row-checkbox"></td>
+                        <td>
+                            <div class="filename">эпикриз_кардиология_демо_01.md</div>
+                            <div class="file-meta">Демо • Выписной эпикриз • сегодня, 10:42</div>
+                        </td>
+                        <td><span class="badge badge-success">Завершено</span></td>
+                        <td>✅ Валидно<br><span class="file-meta">29 из 29 признаков</span></td>
+                        <td class="col-actions"><button class="btn-icon" title="Скачать JSON" onclick="alert('Скачивание файла началось')">⬇</button></td>
+                    </tr>
+                    
+                    <!-- Строка 2 (С ОШИБКОЙ) - видна по умолчанию -->
+                    <tr id="row-error" onclick="window.location.href='verify.html'">
+                        <td class="col-checkbox" onclick="event.stopPropagation()"><input type="checkbox" class="row-checkbox"></td>
+                        <td>
+                            <div class="filename">эпикриз_терапия_демо_03.md</div>
+                            <div class="file-meta">Демо • Выписной эпикриз • сегодня, 10:31</div>
+                        </td>
+                        <td><span class="badge badge-warning">Требует проверки</span></td>
+                        <td>⚠️ Ошибка формата<br><span class="file-meta">1 из 6 признаков невалиден</span></td>
+                        <td class="col-actions" onclick="event.stopPropagation()"><button class="btn-icon" disabled>⬇</button></td>
+                    </tr>
+
+                    <!-- Строка 2 (ИСПРАВЛЕННАЯ) - скрыта по умолчанию -->
+                    <tr id="row-success" style="display: none;" class="fade-in">
+                        <td class="col-checkbox"><input type="checkbox" class="row-checkbox"></td>
+                        <td>
+                            <div class="filename">эпикриз_терапия_демо_03.md</div>
+                            <div class="file-meta">Демо • Выписной эпикриз • сегодня, 10:31 (Исправлено)</div>
+                        </td>
+                        <td><span class="badge badge-success">Завершено</span></td>
+                        <td>✅ Валидно<br><span class="file-meta">6 из 6 признаков</span></td>
+                        <td class="col-actions"><button class="btn-icon" title="Скачать JSON" onclick="alert('Скачивание файла началось')">⬇</button></td>
+                    </tr>
+
+                    <!-- Строка 3 -->
+                    <tr style="cursor: default;">
+                        <td class="col-checkbox"><input type="checkbox" class="row-checkbox" disabled></td>
+                        <td>
+                            <div class="filename">протокол_холтер_демо_08.md</div>
+                            <div class="file-meta">Демо • Суточное мониторирование • сегодня, 10:02</div>
+                        </td>
+                        <td><span class="badge badge-processing">Обрабатывается</span></td>
+                        <td>⏳ Ожидает обработки<br><span class="file-meta">Валидация не начата</span></td>
+                        <td class="col-actions"><button class="btn-icon" disabled>⬇</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function toggleSelectAll(source) {
+            const checkboxes = document.querySelectorAll('.row-checkbox');
+            checkboxes.forEach(cb => {
+                if (!cb.disabled) {
+                    cb.checked = source.checked;
+                }
+            });
+        }
+
+        // Магия для презентации: проверяем, вернулись ли мы с экрана исправления
+        window.onload = function() {
+            if (window.location.search.includes('corrected=true')) {
+                // Прячем строку с ошибкой и показываем исправленную зеленую
+                document.getElementById('row-error').style.display = 'none';
+                document.getElementById('row-success').style.display = 'table-row';
+                
+                // Обновляем статистику в карточках
+                document.getElementById('val-ready').innerText = '19';
+                document.getElementById('val-pending').innerText = '5';
+                document.getElementById('sub-pending').innerText = '3 на проверке • 2 в обработке';
+            }
+        };
+    </script>
+</body>
+</html>

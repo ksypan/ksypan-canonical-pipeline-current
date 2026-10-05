@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МедДанные | Проверка документа</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background-color: #f4f7fb; margin: 0; display: flex; height: 100vh; color: #1e293b; }
+        .sidebar { width: 260px; background-color: #ffffff; border-right: 1px solid #e2e8f0; padding: 24px; flex-shrink: 0; box-sizing: border-box; }
+        .logo { font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 30px; }
+        .menu-item { padding: 12px 16px; color: #64748b; text-decoration: none; display: block; border-radius: 8px; margin-bottom: 5px; font-weight: 500; transition: 0.2s; }
+        .menu-item:hover { background-color: #f1f5f9; }
+        .menu-item.active { background-color: #e0f2fe; color: #0284c7; }
+        .main-content { flex: 1; display: flex; flex-direction: column; padding: 24px 40px; overflow: hidden; }
+        .header { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .header-titles h1 { margin: 0 0 5px 0; font-size: 24px; }
+        .header-titles p { margin: 0; color: #64748b; font-size: 14px; }
+        .breadcrumbs { font-size: 13px; color: #94a3b8; margin-bottom: 15px; }
+        .status-badge { font-size: 12px; padding: 6px 12px; border-radius: 20px; background: #fef08a; color: #854d0e; font-weight: 600; display: inline-block; }
+        .split-container { display: flex; gap: 24px; flex: 1; overflow: hidden; }
+        .panel { flex: 1; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+        .panel-header { padding: 16px 20px; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #0f172a; display: flex; justify-content: space-between; align-items: center; }
+        .panel-header-sub { font-size: 12px; color: #64748b; font-weight: 400; }
+        .panel-content { padding: 20px; overflow-y: auto; flex: 1; font-size: 14px; line-height: 1.6; }
+        .doc-text { white-space: pre-line; color: #334155; }
+        .doc-meta { font-size: 12px; color: #94a3b8; margin-bottom: 15px; display: inline-block; padding: 4px 8px; background: #f1f5f9; border-radius: 4px; }
+        mark { background-color: #fef08a; padding: 2px 4px; border-radius: 4px; color: #1e293b; font-weight: 500; }
+        .info-notice { background-color: #f0f9ff; border: 1px solid #bae6fd; color: #0369a1; padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; display: flex; gap: 10px; align-items: center; }
+        details { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; background: #ffffff; }
+        summary { padding: 16px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background-color: #f8fafc; border-radius: 8px; }
+        summary::-webkit-details-marker { display: none; }
+        summary:hover { background-color: #f1f5f9; }
+        .details-content { padding: 16px; border-top: 1px solid #e2e8f0; }
+        .form-group { margin-bottom: 15px; }
+        .form-label { display: block; font-size: 12px; color: #64748b; margin-bottom: 6px; }
+        .form-input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; color: #0f172a; box-sizing: border-box; background-color: #f8fafc; }
+        .form-input:focus { outline: none; border-color: #3f51b5; background-color: #ffffff; }
+        .form-input.error { border-color: #ef4444; background-color: #fef2f2; color: #b91c1c; }
+        .form-input.error:focus { outline: none; border-color: #ef4444; box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2); }
+        .error-message { color: #ef4444; font-size: 11px; margin-top: 5px; display: block; font-weight: 500; }
+        .panel-footer { padding: 16px 20px; border-top: 1px solid #e2e8f0; background-color: #ffffff; }
+        .footer-stats { font-size: 12px; color: #ef4444; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 5px; }
+        .btn-primary { background-color: #3f51b5; color: white; border: none; border-radius: 6px; padding: 12px; font-size: 14px; font-weight: 500; width: 100%; cursor: pointer; text-align: center; transition: 0.2s; }
+        .btn-primary:hover { background-color: #303f9f; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">🏥 МедДанные</div>
+        <div style="font-size: 12px; color: #94a3b8; font-weight: 600; margin-bottom: 10px; margin-top: 30px;">РАБОТА С ДАННЫМИ</div>
+        <a href="index.html" class="menu-item">📥 Загрузка файлов</a>
+        <a href="registry.html" class="menu-item">📋 Реестр документов</a>
+        <a href="verify.html" class="menu-item active">👁 Проверка документа</a>
+    </div>
+    <div class="main-content">
+        <div class="breadcrumbs">Реестр документов / эпикриз_терапия_демо_03.md</div>
+        <div class="header">
+            <div class="header-titles">
+                <h1>Проверка медицинского документа</h1>
+                <p>Сверьте извлечённые значения с текстом и подтвердите результат.</p>
+            </div>
+            <div class="status-badge">На проверке</div>
+        </div>
+        <div class="split-container">
+            <!-- Левая панель -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span>📄 Исходный документ</span>
+                    <span class="panel-header-sub">Жёлтым выделены данные, извлечённые ИИ</span>
+                </div>
+                <div class="panel-content">
+                    <div class="doc-text">
+                        <b>КАРДИОЛОГИЧЕСКОЕ ОТДЕЛЕНИЕ</b>
+                        <b>Выписной эпикриз</b>
+                        <span class="doc-meta">Учебный пример • Персональные данные отсутствуют</span>
+                        
+                        <b>Дата поступления:</b> <mark>10.09.2025</mark>.
+                        <b>Дата выписки:</b> <mark>18.09,2025</mark>.
+
+                        <b>Жалобы при поступлении</b>
+                        Головная боль, периодическое повышение артериального давления до 170/100 мм рт. ст., утомляемость, одышка при физической нагрузке.
+
+                        <b>Анамнез заболевания</b>
+                        Считает себя больным в течение последних 5 лет, когда впервые стал отмечать повышение АД. Базовую гипотензивную терапию принимает нерегулярно. Ухудшение состояния в течение последней недели на фоне стресса.
+
+                        <b>Клинический диагноз</b>
+                        Основной: Артериальная гипертензия. II стадия, 2 степень, риск 3. Код МКБ-10: <mark>I10</mark>.
+                        Сопутствующие заболевания: <mark>ХБП 3А</mark>. <mark>Сахарный диабет 2 типа</mark>, целевой уровень гликированного гемоглобина менее 7,0%.
+
+                        <b>Лабораторные и инструментальные исследования</b>
+                        Общий анализ крови от 11.09.2025: Hb 135 г/л, Эр 4.5, Л 6.2. 
+                        Биохимия крови от 11.09.2025: Общий холестерин 6.2 ммоль/л, креатинин 115 мкмоль/л, глюкоза натощак 7.8 ммоль/л.
+                        <b>ЭКГ от 11.09.2025:</b> <mark>Ритм синусовый, ЧСС 72 уд/мин</mark>. Электрическая ось сердца не отклонена. Острых ишемических изменений не выявлено.
+
+                        <b>Проведенное лечение</b>
+                        Режим палатный. Медикаментозная терапия: Периндоприл 5 мг/сут, Аторвастатин 20 мг/сут, Метформин 1000 мг/сут. Пациент выписывается в удовлетворительном состоянии.
+                    </div>
+                </div>
+            </div>
+            <!-- Правая панель -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span>📋 Извлечённые данные</span>
+                    <span class="panel-header-sub">Документ 1 из 4 ➔</span>
+                </div>
+                <div class="panel-content">
+                    <div class="info-notice">💡 Обратите внимание: некоторые поля не прошли валидацию формата.</div>
+                    
+                    <details open>
+                        <summary>Даты эпизода <span style="color: #ef4444; font-weight: 600; font-size: 13px;">Внимание</span></summary>
+                        <div class="details-content">
+                            <div class="form-group">
+                                <label class="form-label">Дата поступления</label>
+                                <input type="text" class="form-input" value="10.09.2025">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Дата выписки</label>
+                                <input type="text" class="form-input error" value="18.09,2025">
+                                <span class="error-message">Неверный формат. Ожидается: ДД.ММ.ГГГГ</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Диагноз <span style="color: #64748b; font-weight: 400; font-size: 13px;">3/3</span></summary>
+                        <div class="details-content">
+                            <div class="form-group"><label class="form-label">Основной диагноз МКБ-10</label><input type="text" class="form-input" value="I10"></div>
+                            <div class="form-group"><label class="form-label">Хроническая болезнь почек</label><input type="text" class="form-input" value="ХБП 3А"></div>
+                            <div class="form-group"><label class="form-label">Сахарный диабет</label><input type="text" class="form-input" value="2 типа"></div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>ЭКГ <span style="color: #64748b; font-weight: 400; font-size: 13px;">1/1</span></summary>
+                        <div class="details-content">
+                            <div class="form-group"><label class="form-label">Результат ЭКГ</label><input type="text" class="form-input" value="Синусовый ритм, ЧСС 72 уд/мин"></div>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="panel-footer">
+                    <div class="footer-stats">⚠️ Выделено 5 из 6 данных. Найдена 1 ошибка формата.</div>
+                    <!-- Измененная ссылка: возвращаемся в реестр с флагом corrected=true -->
+                    <button class="btn-primary" onclick="window.location.href='registry.html?corrected=true'">Сохранить и вернуться в реестр ➔</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
